@@ -89,7 +89,12 @@ npm run scaffold:year -- 2025
 - El bundle de la app React aun es grande y debe dividirse por seccion o por ano.
 - Existen advertencias conocidas del dataset 2024 que no deben esconderse; deben seguir documentadas.
 - El sitio legado y la nueva app conviven, por lo que hay que evitar mezclar cambios de una capa con la otra.
+- Hay archivos binarios grandes en el repo; para futuras cargas pesadas conviene migrar a Git LFS o a una estrategia de artefactos versionados.
 
 ## Regla General
 
 Si una decision no queda versionada en codigo, datos o markdown, esa decision se pierde.
+
+## Politica de Binarios
+
+Ver [docs/POLITICA_BINARIOS.md](./docs/POLITICA_BINARIOS.md).
