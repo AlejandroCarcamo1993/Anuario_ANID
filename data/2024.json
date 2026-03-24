@@ -1,0 +1,1097 @@
+{
+  "meta": {
+    "year": 2024,
+    "title": "Anuario SCIA 2024",
+    "description": "Extraccion estructurada del estado actual del sitio para iniciar la migracion a una arquitectura data-driven.",
+    "generatedAt": "2026-03-24",
+    "generatedFrom": [
+      "index.html",
+      "ResumenUVE_2024 (2).docx"
+    ],
+    "notes": [
+      "El archivo consolida datos numericos, textos editoriales y bloques hardcodeados relevantes para la capa de presentacion.",
+      "Fuente oficial: Anuario 2024 - ANID 30.12 (5).pdf. Todos los valores numericos fueron reconciliados contra el PDF.",
+      "Advertencias conocidas: (1) financiera — ejecutadoCentros + ejecutadoProyectos != totalEjecutado por diferencia de alcance (instrumentos excluidos del perimetro publicado); (2) congresos — distribucion por instrumento suma 6842, KPI 6867 (25 presentaciones apoyo Milenio sin categoria asignable); (3) territorio — regiones suman 475, KPI 494 (19 iniciativas con presencia multi-regional contadas una vez en KPI).",
+      "Piramide etaria: 13 bandas quinquenales del PDF. Mujeres suman 1070, hombres suman 1737, coinciden con KPIs."
+    ]
+  },
+  "sectionOrder": [
+    "panorama",
+    "postulacion",
+    "financiera",
+    "productividad",
+    "capitalHumano",
+    "diversidad",
+    "territorio",
+    "vinculacion"
+  ],
+  "hero": {
+    "title": "Anuario SCIA 2024",
+    "subtitle": "Estado, vitalidad e impacto del ecosistema de investigacion asociativa de Chile",
+    "statPills": [
+      {
+        "label": "Iniciativas",
+        "value": 473
+      },
+      {
+        "label": "Centros",
+        "value": 72
+      },
+      {
+        "label": "Cobertura",
+        "value": "Chile 2024"
+      }
+    ]
+  },
+  "footer": {
+    "organization": "Agencia Nacional de Investigacion y Desarrollo",
+    "division": "Subdireccion de Centros de Investigacion Asociativa",
+    "unit": "Unidad de Vinculacion y Extension (UVE)",
+    "lastDataCut": "2024-06-26",
+    "sources": [
+      "DB Proyectos SCIA 26.06",
+      "Estadisticas Concursos SCIA 2024",
+      "Base Investigadores SCIA 2024",
+      "Programa de Caja 2024"
+    ]
+  },
+  "sections": {
+    "panorama": {
+      "sectionNumber": "01",
+      "navLabel": "Panorama 2024",
+      "tagLabel": "Panorama 2024",
+      "title": "Anuario SCIA 2024",
+      "subtitle": "Estado, vitalidad e impacto del ecosistema de investigacion asociativa de Chile",
+      "sources": [
+        "DB Proyectos SCIA 26.06"
+      ],
+      "kpis": [
+        {
+          "id": "iniciativas",
+          "label": "Iniciativas",
+          "value": 473,
+          "format": "integer"
+        },
+        {
+          "id": "centros",
+          "label": "Centros",
+          "value": 72,
+          "format": "integer"
+        },
+        {
+          "id": "proyectos",
+          "label": "Proyectos",
+          "value": 307,
+          "format": "integer"
+        },
+        {
+          "id": "presupuesto",
+          "label": "Presupuesto 2024",
+          "value": 88190665,
+          "format": "currency_clp_thousands"
+        }
+      ],
+      "instrumentDistribution": [
+        {
+          "id": "equipamientoMediano",
+          "label": "Equipamiento Mediano",
+          "count": 201,
+          "sharePct": 42.5
+        },
+        {
+          "id": "anillosInvestigacion",
+          "label": "Anillos de Investigacion",
+          "count": 108,
+          "sharePct": 22.8
+        },
+        {
+          "id": "nucleosMilenio",
+          "label": "Nucleos Milenio",
+          "count": 53,
+          "sharePct": 11.2
+        },
+        {
+          "id": "otrosInstrumentos",
+          "label": "Otros instrumentos",
+          "count": 111,
+          "sharePct": 23.5
+        }
+      ],
+      "insights": [
+        {
+          "title": "Lectura clave · Concentracion de cartera",
+          "body": "El 76,5% del total se concentra en solo 3 instrumentos (Equipamiento Mediano, Anillos, Nucleos Milenio), reflejando una cartera dominada por proyectos de mediana escala y redes colaborativas. Esta concentracion sugiere alta dependencia de concursos competitivos y menor peso relativo de los centros de largo aliento en el conteo total de iniciativas."
+        }
+      ]
+    },
+    "postulacion": {
+      "sectionNumber": "02",
+      "navLabel": "Postulacion",
+      "tagLabel": "Concursos 2024",
+      "title": "Postulacion & Adjudicacion",
+      "subtitle": "Concursos 2024: postulaciones, adjudicaciones y brechas de genero por instrumento.",
+      "sources": [
+        "Estadisticas Concursos SCIA 2024"
+      ],
+      "kpis": [
+        {
+          "id": "totalPostulaciones",
+          "label": "Total Postulaciones",
+          "value": 1985,
+          "format": "integer"
+        },
+        {
+          "id": "totalAdjudicaciones",
+          "label": "Total Adjudicaciones",
+          "value": 272,
+          "format": "integer"
+        },
+        {
+          "id": "tasaGlobal",
+          "label": "Tasa Global de Adjudicacion",
+          "value": 13.7,
+          "format": "percentage"
+        },
+        {
+          "id": "participacionFemeninaAdjudicada",
+          "label": "Participacion Femenina Adjudicada",
+          "value": 39.7,
+          "format": "percentage"
+        }
+      ],
+      "genderBreakdown": {
+        "postulaciones": {
+          "hombres": 1230,
+          "mujeres": 755
+        },
+        "adjudicaciones": {
+          "hombres": 164,
+          "mujeres": 108
+        },
+        "tasaAdjudicacionPct": {
+          "hombres": 13.3,
+          "mujeres": 14.3
+        }
+      },
+      "genderGapTable": [
+        {
+          "contest": "Litio y Salares",
+          "femaleApplicationsPct": 39.3,
+          "femaleAwardsPct": 50.0,
+          "gapPp": 10.7,
+          "status": "positive_gap"
+        },
+        {
+          "contest": "Nucleos Milenio Cs. Sociales",
+          "femaleApplicationsPct": 49.9,
+          "femaleAwardsPct": 50.0,
+          "gapPp": 0.1,
+          "status": "parity"
+        }
+      ],
+      "insights": [
+        {
+          "title": "Lectura clave · Genero y adjudicacion",
+          "body": "Contrario a la narrativa habitual, las mujeres alcanzan una tasa de adjudicacion levemente superior (14,3%) frente a los hombres (13,3%), senal de que la calidad de las postulaciones femeninas es alta. Sin embargo, la brecha persiste en volumen: solo el 38% de las postulaciones son de mujeres, lo que limita el numero total de adjudicaciones femeninas. En concursos tematicos como Litio y Salares, la paridad en adjudicaciones ya es un hecho."
+        }
+      ]
+    },
+    "financiera": {
+      "sectionNumber": "03",
+      "navLabel": "Gestion Financiera",
+      "tagLabel": "Ejecucion presupuestaria",
+      "title": "Gestion Financiera",
+      "subtitle": "Ejecucion presupuestaria 2024 por instrumento y categoria.",
+      "sources": [
+        "SCIA Programa de Caja 2024"
+      ],
+      "kpis": [
+        {
+          "id": "ejecutadoCentros",
+          "label": "Ejecutado en Centros",
+          "value": 64358830,
+          "format": "currency_clp_thousands"
+        },
+        {
+          "id": "ejecutadoProyectos",
+          "label": "Ejecutado en Proyectos",
+          "value": 80129246,
+          "format": "currency_clp_thousands"
+        },
+        {
+          "id": "totalEjecutado",
+          "label": "Total Ejecutado 2024",
+          "value": 88190665,
+          "format": "currency_clp_thousands"
+        }
+      ],
+      "budgetByInstrument": [
+        {
+          "instrument": "Centros Basales",
+          "amount": 19952513
+        },
+        {
+          "instrument": "FONDAP",
+          "amount": 13957323
+        },
+        {
+          "instrument": "Anillos Tematicos",
+          "amount": 8942208
+        },
+        {
+          "instrument": "Equip. Mediano",
+          "amount": 8567729
+        },
+        {
+          "instrument": "Inst. Milenio",
+          "amount": 8465252
+        },
+        {
+          "instrument": "Nucleos Milenio",
+          "amount": 6065641
+        },
+        {
+          "instrument": "Ctros. Regionales",
+          "amount": 5569276
+        },
+        {
+          "instrument": "Equip. Mayor",
+          "amount": 4774075
+        },
+        {
+          "instrument": "Excelencia Intl.",
+          "amount": 4535084
+        },
+        {
+          "instrument": "Ctros. Tecnologicos",
+          "amount": 2095583
+        },
+        {
+          "instrument": "Anillos C&T",
+          "amount": 1689120
+        },
+        {
+          "instrument": "Ctros. Educacion",
+          "amount": 1400000
+        },
+        {
+          "instrument": "Exped. Cientificas",
+          "amount": 990185
+        },
+        {
+          "instrument": "Ctros. Servicios",
+          "amount": 630000
+        },
+        {
+          "instrument": "PME",
+          "amount": 205628
+        },
+        {
+          "instrument": "Excedentes",
+          "amount": 199654
+        },
+        {
+          "instrument": "Gastos Operac.",
+          "amount": 151394
+        }
+      ],
+      "insights": [
+        {
+          "title": "Lectura clave · Distribucion presupuestaria",
+          "body": "Los Centros Basales lideran con M$19.952.513 (31% del presupuesto de centros), consolidando la apuesta por ciencia fundamental de largo plazo. Llama la atencion que Equipamiento Mediano y Mayor suman M$13.341.804, evidenciando una inversion sostenida en capacidades de investigacion de las universidades. El presupuesto de Proyectos (M$80.129.246) supera al de Centros (M$64.358.830), lo que refleja la predominancia de instrumentos competitivos de corto y mediano plazo en el ecosistema SCIA."
+        }
+      ]
+    },
+    "productividad": {
+      "sectionNumber": "04",
+      "navLabel": "Productividad",
+      "tagLabel": "Outputs de investigacion",
+      "title": "Productividad Cientifica",
+      "subtitle": "Publicaciones, patentes, formacion, congresos y divulgacion de los centros SCIA.",
+      "sources": [
+        "DB Proyectos SCIA 26.06",
+        "Base Investigadores SCIA 2024"
+      ],
+      "publicaciones": {
+        "totalsByProgram": [
+          {
+            "program": "Institutos Milenio",
+            "total": 1232,
+            "q1": 713
+          },
+          {
+            "program": "Nucleos Milenio",
+            "total": 774,
+            "q1": 403
+          },
+          {
+            "program": "Centros Basales",
+            "total": 802
+          },
+          {
+            "program": "FONDAP",
+            "total": 753
+          },
+          {
+            "program": "Anillos",
+            "total": 308
+          }
+        ]
+      },
+      "patentes": {
+        "totalsByInstrument": [
+          {
+            "instrument": "Ctros. Basales",
+            "patentes": 26,
+            "derechoAutor": 7,
+            "marcas": 3,
+            "secretoIndustrial": 3,
+            "servicioPi": 1
+          },
+          {
+            "instrument": "Inst. Milenio",
+            "patentes": 10,
+            "derechoAutor": 1,
+            "marcas": 0,
+            "secretoIndustrial": 0,
+            "servicioPi": 0
+          },
+          {
+            "instrument": "Anillos",
+            "patentes": 4,
+            "derechoAutor": 0,
+            "marcas": 0,
+            "secretoIndustrial": 0,
+            "servicioPi": 0
+          },
+          {
+            "instrument": "FONDAP",
+            "patentes": 4,
+            "derechoAutor": 0,
+            "marcas": 0,
+            "secretoIndustrial": 0,
+            "servicioPi": 0
+          },
+          {
+            "instrument": "Nucleos",
+            "patentes": 1,
+            "derechoAutor": 0,
+            "marcas": 0,
+            "secretoIndustrial": 0,
+            "servicioPi": 0
+          }
+        ]
+      },
+      "tesis": {
+        "kpis": [
+          {
+            "id": "totalTesis",
+            "label": "Tesis 2024",
+            "value": 1701,
+            "format": "integer"
+          },
+          {
+            "id": "pregradoPct",
+            "label": "Pregrado",
+            "value": 52.3,
+            "format": "percentage"
+          },
+          {
+            "id": "magisterPct",
+            "label": "Magister",
+            "value": 32.7,
+            "format": "percentage"
+          },
+          {
+            "id": "doctoradoPct",
+            "label": "Doctorado",
+            "value": 15.0,
+            "format": "percentage"
+          }
+        ],
+        "levels": {
+          "pregrado": 890,
+          "magister": 556,
+          "doctorado": 255
+        },
+        "distributionByInstrument": [
+          {
+            "instrument": "Ctros. Basales",
+            "pregrado": 343,
+            "magister": 261,
+            "doctorado": 102
+          },
+          {
+            "instrument": "FONDAP",
+            "pregrado": 159,
+            "magister": 93,
+            "doctorado": 48
+          },
+          {
+            "instrument": "Inst. Milenio",
+            "pregrado": 160,
+            "magister": 83,
+            "doctorado": 50
+          },
+          {
+            "instrument": "Nucleos Milenio",
+            "pregrado": 129,
+            "magister": 71,
+            "doctorado": 34
+          },
+          {
+            "instrument": "Anillos",
+            "pregrado": 77,
+            "magister": 43,
+            "doctorado": 17
+          },
+          {
+            "instrument": "Ctros. Educacion",
+            "pregrado": 17,
+            "magister": 2,
+            "doctorado": 4
+          },
+          {
+            "instrument": "Ctros. Regionales",
+            "pregrado": 5,
+            "magister": 3,
+            "doctorado": 0
+          }
+        ]
+      },
+      "congresos": {
+        "kpis": [
+          {
+            "id": "presentaciones",
+            "label": "Presentaciones",
+            "value": 6867,
+            "format": "integer"
+          },
+          {
+            "id": "fueraChilePct",
+            "label": "Fuera de Chile",
+            "value": 44,
+            "format": "percentage"
+          },
+          {
+            "id": "paises",
+            "label": "Paises",
+            "value": 52,
+            "format": "integer"
+          },
+          {
+            "id": "centrosActivos",
+            "label": "Centros activos",
+            "value": 55,
+            "format": "integer"
+          }
+        ],
+        "distributionByInstrument": [
+          {
+            "instrument": "Ctros. Basales",
+            "nacional": 998,
+            "internacional": 873
+          },
+          {
+            "instrument": "Inst. Milenio",
+            "nacional": 929,
+            "internacional": 811
+          },
+          {
+            "instrument": "Nucleos Milenio",
+            "nacional": 623,
+            "internacional": 544
+          },
+          {
+            "instrument": "FONDAP",
+            "nacional": 541,
+            "internacional": 560
+          },
+          {
+            "instrument": "Anillos",
+            "nacional": 411,
+            "internacional": 362
+          },
+          {
+            "instrument": "Ctros. Educacion",
+            "nacional": 100,
+            "internacional": 38
+          },
+          {
+            "instrument": "Ctros. Regionales",
+            "nacional": 41,
+            "internacional": 11
+          }
+        ]
+      },
+      "divulgacion": {
+        "kpis": [
+          {
+            "id": "actividades",
+            "label": "Actividades",
+            "value": 1130,
+            "format": "integer"
+          },
+          {
+            "id": "participantes",
+            "label": "Participantes",
+            "value": 2359046,
+            "format": "integer"
+          },
+          {
+            "id": "promedioPorCentro",
+            "label": "Promedio por centro",
+            "value": 25,
+            "format": "integer"
+          },
+          {
+            "id": "centrosParticipantes",
+            "label": "Centros participantes",
+            "value": 52,
+            "format": "integer"
+          }
+        ],
+        "medianAttendanceByInstrument": [
+          {
+            "instrument": "Ctros. Basales",
+            "medianAttendance": 50
+          },
+          {
+            "instrument": "FONDAP",
+            "medianAttendance": 36
+          },
+          {
+            "instrument": "Anillos",
+            "medianAttendance": 30
+          },
+          {
+            "instrument": "Ctros. Regionales",
+            "medianAttendance": 24.5
+          },
+          {
+            "instrument": "Ctros. Educacion",
+            "medianAttendance": 4
+          }
+        ]
+      },
+      "insights": [
+        {
+          "title": "Lectura clave · Publicaciones",
+          "body": "Los Institutos Milenio publican el 57,9% en Q1 de Web of Science, el estandar de excelencia internacional mas alto. Junto a los Nucleos Milenio (52,1% en Q1), el programa Milenio consolida su posicion como el principal motor de ciencia de frontera en Chile. Con 1.232 publicaciones, los Institutos Milenio producen 1,6 veces mas que FONDAP, pese a tener menos centros."
+        },
+        {
+          "title": "Lectura clave · Formacion de capital humano",
+          "body": "Con 1.701 tesis en 2024, el sistema SCIA es el principal formador de investigadores del pais fuera del CONICYT clasico. La piramide es sana: 52,3% pregrado, 32,7% magister y 15% doctorado. Los Centros FONDAP destacan con 16% de doctorados (el mas alto por instrumento), mientras que los Institutos Milenio forman el 17,1%. El 90,1% de la formacion se concentra en solo 4 instrumentos, evidenciando una oportunidad de expansion hacia instrumentos mas pequenos."
+        },
+        {
+          "title": "Lectura clave · Presencia internacional",
+          "body": "Con 6.867 presentaciones en 52 paises, la ciencia SCIA tiene huella global. El dato mas llamativo: los Centros FONDAP lideran la internacionalizacion con 50,8% de sus presentaciones fuera de Chile, superando a todos los demas instrumentos. En contraste, los Centros de Educacion muestran solo 27,5% de proyeccion internacional, coherente con su foco en impacto local. El 44% de internacionalizacion del sistema supera la media latinoamericana estimada."
+        },
+        {
+          "title": "Lectura clave · Divulgacion cientifica",
+          "body": "Con 2.359.046 participantes en 1.130 actividades, el sistema SCIA alcanza un promedio de 2.087 personas por actividad, cifra excepcional para ciencia basica. Los Centros Basales lideran con mediana de 50 asistentes por evento, reflejando actividades presenciales de alta convocatoria. El contraste con Centros de Educacion (mediana 4) revela distintos modelos de vinculacion: masivos vs. especializados. La divulgacion se consolida como puente entre la ciencia SCIA y la ciudadania."
+        }
+      ]
+    },
+    "capitalHumano": {
+      "sectionNumber": "05",
+      "navLabel": "Capital Humano",
+      "tagLabel": "Equipo investigador",
+      "title": "Capital Humano",
+      "subtitle": "Composicion del equipo humano de los centros SCIA 2024 por genero y tramo etario.",
+      "sources": [
+        "Base Investigadores SCIA 2024"
+      ],
+      "kpis": [
+        {
+          "id": "total",
+          "label": "Total personas",
+          "value": 2807,
+          "format": "integer"
+        },
+        {
+          "id": "hombres",
+          "label": "Hombres",
+          "value": 1737,
+          "format": "integer"
+        },
+        {
+          "id": "mujeres",
+          "label": "Mujeres",
+          "value": 1070,
+          "format": "integer"
+        },
+        {
+          "id": "mujeresPct",
+          "label": "Mujeres",
+          "value": 38.1,
+          "format": "percentage"
+        },
+        {
+          "id": "tramo3554Pct",
+          "label": "Tramo 35-54",
+          "value": 72.7,
+          "format": "percentage"
+        }
+      ],
+      "agePyramid": [
+        { "ageRange": "80+",   "women": 5,   "men": 10  },
+        { "ageRange": "75-79", "women": 2,   "men": 16  },
+        { "ageRange": "70-74", "women": 18,  "men": 37  },
+        { "ageRange": "65-69", "women": 18,  "men": 77  },
+        { "ageRange": "60-64", "women": 43,  "men": 114 },
+        { "ageRange": "55-59", "women": 99,  "men": 176 },
+        { "ageRange": "50-54", "women": 159, "men": 282 },
+        { "ageRange": "45-49", "women": 242, "men": 359 },
+        { "ageRange": "40-44", "women": 247, "men": 375 },
+        { "ageRange": "35-39", "women": 169, "men": 209 },
+        { "ageRange": "30-34", "women": 53,  "men": 64  },
+        { "ageRange": "25-29", "women": 13,  "men": 16  },
+        { "ageRange": "20-24", "women": 2,   "men": 2   }
+      ],
+      "insights": [
+        {
+          "title": "Lectura clave · Capital humano",
+          "body": "El 72,7% del capital humano se concentra en el tramo 35-54 anos, senal de un ecosistema maduro con investigadores en su etapa de mayor productividad. La presencia de mujeres es mas alta en el tramo menor de 35 anos (45,3%), lo que anticipa una generacion de relevo mas equilibrada en genero. El reto esta en retener este talento emergente y asegurar continuidad en las trayectorias de investigacion."
+        }
+      ]
+    },
+    "diversidad": {
+      "sectionNumber": "06",
+      "navLabel": "Diversidad",
+      "tagLabel": "Paridad e inclusion",
+      "title": "Diversidad & Equidad",
+      "subtitle": "Participacion femenina e indicadores de equidad de genero en los centros 2024.",
+      "sources": [
+        "Base Investigadores SCIA 2024"
+      ],
+      "kpis": [
+        {
+          "id": "total",
+          "label": "Total personas",
+          "value": 3547,
+          "format": "integer"
+        },
+        {
+          "id": "mujeres",
+          "label": "Mujeres",
+          "value": 1278,
+          "format": "integer"
+        },
+        {
+          "id": "mujeresPct",
+          "label": "Participacion femenina",
+          "value": 36.0,
+          "format": "percentage"
+        },
+        {
+          "id": "hombres",
+          "label": "Hombres",
+          "value": 2269,
+          "format": "integer"
+        },
+        {
+          "id": "hombresPct",
+          "label": "Participacion masculina",
+          "value": 64.0,
+          "format": "percentage"
+        }
+      ],
+      "leadership": {
+        "razonHM": 1.78,
+        "directivoFemeninoPct": 34.9,
+        "liderazgoInvestigadorasPct": 34.6,
+        "liderazgoJovenesPct": 45.5
+      },
+      "femaleParticipationByInstrument": [
+        {
+          "instrument": "Ctro. Servicios",
+          "valuePct": 66.7
+        },
+        {
+          "instrument": "Ctro. Educacion",
+          "valuePct": 48.0
+        },
+        {
+          "instrument": "FONDAP",
+          "valuePct": 39.0
+        },
+        {
+          "instrument": "Inst. Milenio",
+          "valuePct": 37.0
+        },
+        {
+          "instrument": "Nucleos Milenio",
+          "valuePct": 35.0
+        },
+        {
+          "instrument": "Ctros. Regionales",
+          "valuePct": 32.0
+        },
+        {
+          "instrument": "Ctros. Basales",
+          "valuePct": 28.4
+        },
+        {
+          "instrument": "Equip. Mediano",
+          "valuePct": 26.9
+        }
+      ],
+      "insights": []
+    },
+    "territorio": {
+      "sectionNumber": "07",
+      "navLabel": "Territorio",
+      "tagLabel": "Distribucion geografica",
+      "title": "Cobertura Territorial",
+      "subtitle": "Distribucion geografica de las 494 iniciativas SCIA en las regiones de Chile.",
+      "sources": [
+        "DB Proyectos SCIA 26.06"
+      ],
+      "kpis": [
+        {
+          "id": "iniciativas",
+          "label": "Iniciativas",
+          "value": 494,
+          "format": "integer"
+        },
+        {
+          "id": "regionesPrincipales",
+          "label": "Regiones principales",
+          "value": 3,
+          "format": "integer"
+        },
+        {
+          "id": "regionesPrincipalesPct",
+          "label": "Participacion top 3",
+          "value": 72.9,
+          "format": "percentage"
+        },
+        {
+          "id": "rmCount",
+          "label": "Region Metropolitana",
+          "value": 248,
+          "format": "integer"
+        },
+        {
+          "id": "rmPct",
+          "label": "Region Metropolitana",
+          "value": 50.2,
+          "format": "percentage"
+        }
+      ],
+      "regions": [
+        {
+          "mapId": "map_chile_Metropolitana",
+          "name": "Metropolitana",
+          "count": 248,
+          "pct": 50.2
+        },
+        {
+          "mapId": "map_chile_Valparaiso",
+          "name": "Valparaiso",
+          "count": 57,
+          "pct": 11.5
+        },
+        {
+          "mapId": "map_chile_Biobio",
+          "name": "Biobio",
+          "count": 55,
+          "pct": 11.1
+        },
+        {
+          "mapId": "map_chile_Antofagasta",
+          "name": "Antofagasta",
+          "count": 20,
+          "pct": 4.0
+        },
+        {
+          "mapId": "map_chile_Maule",
+          "name": "Maule",
+          "count": 18,
+          "pct": 3.6
+        },
+        {
+          "mapId": "map_chile_Coquimbo",
+          "name": "Coquimbo",
+          "count": 16,
+          "pct": 3.2
+        },
+        {
+          "mapId": "map_chile_Los_Rios",
+          "name": "Los Rios",
+          "count": 16,
+          "pct": 3.2
+        },
+        {
+          "mapId": "map_chile_Araucania",
+          "name": "Araucania",
+          "count": 15,
+          "pct": 3.0
+        },
+        {
+          "mapId": "map_chile_Tarapaca",
+          "name": "Tarapaca",
+          "count": 8,
+          "pct": 1.6
+        },
+        {
+          "mapId": "map_chile_Los_Lagos",
+          "name": "Los Lagos",
+          "count": 7,
+          "pct": 1.4
+        },
+        {
+          "mapId": "map_chile_AricaParinacota",
+          "name": "Arica y Parinacota",
+          "count": 4,
+          "pct": 0.8
+        },
+        {
+          "mapId": "map_chile_OHiggins",
+          "name": "O'Higgins",
+          "count": 4,
+          "pct": 0.8
+        },
+        {
+          "mapId": "map_chile_Nuble",
+          "name": "Nuble",
+          "count": 3,
+          "pct": 0.6
+        },
+        {
+          "mapId": "map_chile_Atacama",
+          "name": "Atacama",
+          "count": 2,
+          "pct": 0.4
+        },
+        {
+          "mapId": "map_chile_Aysen",
+          "name": "Aysen",
+          "count": 1,
+          "pct": 0.2
+        },
+        {
+          "mapId": "map_chile_Magallanes",
+          "name": "Magallanes",
+          "count": 1,
+          "pct": 0.2
+        }
+      ],
+      "insights": [
+        {
+          "title": "Lectura clave · Concentracion territorial",
+          "body": "La Region Metropolitana concentra el 50,2% de las iniciativas (248 de 494), seguida por Valparaiso (11,5%) y Biobio (11,1%). Estas 3 regiones capturan el 72,9% del total nacional, reflejando la alta concentracion de universidades con capacidades de investigacion en las grandes metropolis. Las regiones del sur y norte extremo (Aysen, Magallanes, Arica) suman apenas 6 iniciativas, una oportunidad para politicas de descentralizacion cientifica. Los Macroterritorios Norte, Centro y Sur muestran distribuciones muy distintas segun tipo de instrumento."
+        }
+      ]
+    },
+    "vinculacion": {
+      "sectionNumber": "08",
+      "navLabel": "Vinculacion",
+      "tagLabel": "Impacto y transferencia",
+      "title": "Vinculacion & Ciencia con Impacto",
+      "subtitle": "Resumen UVE 2024 por dimension, articulacion institucional y vinculo con actores estrategicos.",
+      "sources": [
+        "ResumenUVE_2024 (2).docx"
+      ],
+      "kpis": [
+        {
+          "id": "actividadesUve",
+          "label": "Actividades UVE",
+          "value": 12,
+          "format": "integer"
+        },
+        {
+          "id": "participantes",
+          "label": "Participantes",
+          "value": 1500,
+          "format": "integer"
+        },
+        {
+          "id": "centrosParticipantes",
+          "label": "Centros participantes",
+          "value": 50,
+          "format": "integer"
+        }
+      ],
+      "summary": {
+        "title": "Tres dimensiones, doce actividades y una agenda de articulacion publica para la ciencia SCIA",
+        "lead": "La Unidad de Vinculacion y Extension desplego una agenda 2024 organizada en tres frentes complementarios: visibilizacion del quehacer cientifico, fortalecimiento de la asociatividad entre instrumentos ANID y vinculo con actores estrategicos del ecosistema publico, social y productivo. La distribucion por color del documento fuente ordena la lectura en 2 actividades de visibilizacion, 4 de asociatividad y 6 de vinculacion externa."
+      },
+      "dimensions": [
+        {
+          "id": "visibility",
+          "colorLabel": "Verde",
+          "title": "Visibilizar el quehacer de proyectos SCIA",
+          "description": "Posicionar la investigacion de los centros en espacios de alta visibilidad publica y acercarla a ciudadania, medios y estudiantes.",
+          "count": 2,
+          "timeframe": "Enero · Julio",
+          "badge": "Ciudadania",
+          "activities": [
+            {
+              "date": "16 de enero",
+              "place": "CEINA · Santiago",
+              "title": "Congreso Futuro 2024 \"IA y el Futuro del Trabajo\"",
+              "actors": "Fundacion Encuentros del Futuro · Centros invitados.",
+              "objective": "Visibilizar investigaciones de los Centros ANID en tematicas de interes de la ciudadania."
+            },
+            {
+              "date": "23 y 24 de julio",
+              "place": "Casa Piedra",
+              "title": "Protagonistas 2030",
+              "actors": "Protagonistas 2030 · Plenario con Vania Martinez.",
+              "objective": "Visibilizar el trabajo de las universidades en estudiantes de 3° y 4° medio y promover vocaciones cientificas."
+            }
+          ]
+        },
+        {
+          "id": "associativity",
+          "colorLabel": "Rosa",
+          "title": "Asociatividad Centros y proyectos ANID",
+          "description": "Fortalecer comunidad, gobernanza, coordinacion interna y relevo entre equipos, centros, proyectos y actores de soporte del ecosistema SCIA.",
+          "count": 4,
+          "timeframe": "Marzo · Diciembre",
+          "badge": "Comunidad",
+          "activities": [
+            {
+              "date": "26 de marzo",
+              "place": "FCFM Beauchef · Santiago",
+              "title": "Conversatorio de Genero",
+              "actors": "AMTC · Centros ANID.",
+              "objective": "Socializar practicas implementadas por los centros para disminuir brechas de genero."
+            },
+            {
+              "date": "13 de mayo",
+              "place": "Salon Bicentenario · Santiago",
+              "title": "Reunion Encargados de Comunicaciones de Centros y proyectos SCIA",
+              "actors": "Instrumentos SCIA · Teleton.",
+              "objective": "Presentar la planificacion 2024, revisar herramientas comunicacionales y fortalecer comunidad en torno a la investigacion asociativa."
+            },
+            {
+              "date": "29 de octubre",
+              "place": "Cowork INAPI · Santiago",
+              "title": "Reunion de directores ejecutivos y gerentes",
+              "actors": "Centros ANID.",
+              "objective": "Abordar gobernanza, vinculacion internacional, gestion de datos abiertos y divulgacion del quehacer cientifico."
+            },
+            {
+              "date": "11 de diciembre",
+              "place": "Hotel Lastarria · Santiago",
+              "title": "Jovenes ConCiencia",
+              "actors": "Investigadores jovenes de Centros ANID.",
+              "objective": "Propiciar la asociatividad entre investigadores/as jovenes de centros en torno a la gestion de datos."
+            }
+          ]
+        },
+        {
+          "id": "ecosystem",
+          "colorLabel": "Turquesa",
+          "title": "Vinculacion con otros actores del ecosistema",
+          "description": "Conectar la ciencia financiada por ANID con industria, regiones, sector social y espacios de incidencia publica basados en evidencia.",
+          "count": 6,
+          "timeframe": "Junio · Noviembre",
+          "badge": "Ecosistema",
+          "activities": [
+            {
+              "date": "5 y 6 de junio",
+              "place": "Antofagasta",
+              "title": "EXPONOR",
+              "actors": "Ministerio de Mineria · SMI · AMTC · CEDENNA · Fraunhofer · CICITEM · CCTVAL.",
+              "objective": "Poner en valor los fondos ANID para responder a demandas de la industria minera desde la base cientifico-tecnologica."
+            },
+            {
+              "date": "1 de agosto",
+              "place": "Vina del Mar",
+              "title": "Transfiere Region",
+              "actors": "Camara Chilena de Comercio · CDT · CIGIDEN · CREAS · CENAMAD · AC3E.",
+              "objective": "Posicionar un espacio colaborativo de alto nivel para productividad y sostenibilidad ambiental en el ecosistema regional."
+            },
+            {
+              "date": "8 de agosto",
+              "place": "Dependencias Teleton",
+              "title": "Teleton",
+              "actors": "Teleton · AC3E · Nucleo DISCA · EDUINCLUSIVA.",
+              "objective": "Vincular demandas del sector social con posibles soluciones tecnologicas de ANID y proyectos SCIA-SIA."
+            },
+            {
+              "date": "15 al 17 de octubre",
+              "place": "Espacio Riesco · Santiago",
+              "title": "Feria Edifica",
+              "actors": "CCHC · CDT · IBIO · CEDEUS · ISCI.",
+              "objective": "Poner en valor los fondos ANID para responder a desafios de la industria de la construccion desde la base cientifico-tecnologica."
+            },
+            {
+              "date": "23 de octubre",
+              "place": "Ex Congreso Nacional · Santiago",
+              "title": "Renovacion Convenio ANID-BCN",
+              "actors": "Biblioteca del Congreso Nacional · ANID.",
+              "objective": "Vincular de manera organica la ciencia financiada con fondos publicos con la elaboracion de politicas publicas."
+            },
+            {
+              "date": "13 de noviembre",
+              "place": "Webinar",
+              "title": "RIS Investigacion",
+              "actors": "Ministerio de Desarrollo Social y Familia.",
+              "objective": "Presentar el repositorio RIS Investigacion y abrir un canal de articulacion con actores de la sociedad y la politica social."
+            }
+          ]
+        }
+      ],
+      "sourceNote": "Fuente UVE: sintesis estructurada a partir de ResumenUVE_2024 (2).docx, respetando las 3 dimensiones codificadas por color del documento original.",
+      "insights": [
+        {
+          "title": "Lectura clave · Vinculacion con el entorno",
+          "body": "En 2024, la UVE articulo 12 actividades en 3 dimensiones complementarias: 2 orientadas a visibilizacion, 4 a asociatividad y 6 a vinculacion con actores del ecosistema. La agenda muestra un enfasis claro en abrir puentes con industria, sector social, regiones y espacios de incidencia publica, sin dejar de sostener comunidad, gobernanza y relevo entre los instrumentos ANID."
+        }
+      ],
+      "scientificHighlights": {
+        "selectedCount": 4,
+        "items": [
+          {
+            "date": "Julio 2024",
+            "programs": "IMII + CECAN",
+            "title": "Inmunoterapia personalizada contra el cancer de colon en Chile",
+            "summary": "Reduce brecha de eficacia en tratamientos oncologicos para genetica latinoamericana.",
+            "tags": [
+              "Inmunologia",
+              "Biomedicina",
+              "Cancer"
+            ]
+          },
+          {
+            "date": "Abril 2024",
+            "programs": "iBIO + MN-SAP",
+            "title": "Resiliencia hidrica en plantas del Desierto de Atacama",
+            "summary": "Soluciones geneticas para seguridad alimentaria ante el cambio climatico.",
+            "tags": [
+              "Biologia",
+              "Recursos Hidricos",
+              "Cambio Climatico"
+            ]
+          },
+          {
+            "date": "Febrero 2024",
+            "programs": "CATA",
+            "title": "Galaxia espiral barrada mas lejana similar a la Via Lactea",
+            "summary": "Desafia modelos actuales de formacion galactica. Observada con telescopio James Webb.",
+            "tags": [
+              "Astrofisica",
+              "Cosmologia"
+            ]
+          },
+          {
+            "date": "Marzo 2024",
+            "programs": "Instituto Milenio BASE",
+            "title": "Microorganismos antarticos y cambio climatico",
+            "summary": "Alerta sobre riesgos sanitarios del derretimiento del permafrost antartico.",
+            "tags": [
+              "Microbiologia",
+              "Cambio Climatico",
+              "Salud"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

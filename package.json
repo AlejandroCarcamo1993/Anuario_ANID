@@ -1,0 +1,31 @@
+{
+  "name": "anuario-scia",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "app:dev": "vite --config app/vite.config.mjs",
+    "app:build": "vite build --config app/vite.config.mjs",
+    "app:preview": "vite preview --config app/vite.config.mjs",
+    "scaffold:year": "node scripts/scaffold-year.js",
+    "validate:data": "node scripts/validate.js",
+    "validate:data:strict": "node scripts/validate.js --strict",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "chart.js": "^4.5.1",
+    "framer-motion": "^12.23.24",
+    "playwright-core": "^1.58.2",
+    "react": "^19.2.0",
+    "react-chartjs-2": "^5.3.1",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^5.1.0",
+    "vite": "^7.1.12"
+  }
+}

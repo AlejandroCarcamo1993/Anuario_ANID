@@ -1,0 +1,918 @@
+{
+  "meta": {
+    "year": 2025,
+    "title": "Anuario SCIA 2025",
+    "description": "Scaffold base para poblar el anuario 2025 manteniendo el contrato de datos actual.",
+    "generatedAt": "2026-03-24",
+    "generatedFrom": [
+      "2024.json"
+    ],
+    "scaffoldFromYear": 2024,
+    "status": "scaffold",
+    "notes": [
+      "Archivo base generado automaticamente para poblar un nuevo año sin romper el contrato del shell React.",
+      "Las etiquetas estructurales se conservan y los datos/editoriales dependientes del año se vacian para ser completados."
+    ]
+  },
+  "sectionOrder": [
+    "panorama",
+    "postulacion",
+    "financiera",
+    "productividad",
+    "capitalHumano",
+    "diversidad",
+    "territorio",
+    "vinculacion"
+  ],
+  "hero": {
+    "title": "Anuario SCIA 2025",
+    "subtitle": "Estado, vitalidad e impacto del ecosistema de investigacion asociativa de Chile",
+    "statPills": [
+      {
+        "label": "Iniciativas",
+        "value": null
+      },
+      {
+        "label": "Centros",
+        "value": null
+      },
+      {
+        "label": "Cobertura",
+        "value": "Chile 2025"
+      }
+    ]
+  },
+  "footer": {
+    "organization": "Agencia Nacional de Investigacion y Desarrollo",
+    "division": "Subdireccion de Centros de Investigacion Asociativa",
+    "unit": "Unidad de Vinculacion y Extension (UVE)",
+    "lastDataCut": null,
+    "sources": []
+  },
+  "sections": {
+    "panorama": {
+      "sectionNumber": "01",
+      "navLabel": "Panorama 2025",
+      "tagLabel": "Panorama 2025",
+      "title": "Anuario SCIA 2025",
+      "subtitle": "Estado, vitalidad e impacto del ecosistema de investigacion asociativa de Chile",
+      "sources": [],
+      "kpis": [
+        {
+          "id": "iniciativas",
+          "label": "Iniciativas",
+          "value": null,
+          "format": "integer"
+        },
+        {
+          "id": "centros",
+          "label": "Centros",
+          "value": null,
+          "format": "integer"
+        },
+        {
+          "id": "proyectos",
+          "label": "Proyectos",
+          "value": null,
+          "format": "integer"
+        },
+        {
+          "id": "presupuesto",
+          "label": "Presupuesto 2024",
+          "value": null,
+          "format": "currency_clp_thousands"
+        }
+      ],
+      "instrumentDistribution": [
+        {
+          "id": "equipamientoMediano",
+          "label": "Equipamiento Mediano",
+          "count": null,
+          "sharePct": null
+        },
+        {
+          "id": "anillosInvestigacion",
+          "label": "Anillos de Investigacion",
+          "count": null,
+          "sharePct": null
+        },
+        {
+          "id": "nucleosMilenio",
+          "label": "Nucleos Milenio",
+          "count": null,
+          "sharePct": null
+        },
+        {
+          "id": "otrosInstrumentos",
+          "label": "Otros instrumentos",
+          "count": null,
+          "sharePct": null
+        }
+      ],
+      "insights": []
+    },
+    "postulacion": {
+      "sectionNumber": "02",
+      "navLabel": "Postulacion",
+      "tagLabel": "Concursos 2025",
+      "title": "Postulacion & Adjudicacion",
+      "subtitle": "Concursos 2025: postulaciones, adjudicaciones y brechas de genero por instrumento.",
+      "sources": [],
+      "kpis": [
+        {
+          "id": "totalPostulaciones",
+          "label": "Total Postulaciones",
+          "value": null,
+          "format": "integer"
+        },
+        {
+          "id": "totalAdjudicaciones",
+          "label": "Total Adjudicaciones",
+          "value": null,
+          "format": "integer"
+        },
+        {
+          "id": "tasaGlobal",
+          "label": "Tasa Global de Adjudicacion",
+          "value": null,
+          "format": "percentage"
+        },
+        {
+          "id": "participacionFemeninaAdjudicada",
+          "label": "Participacion Femenina Adjudicada",
+          "value": null,
+          "format": "percentage"
+        }
+      ],
+      "genderBreakdown": {
+        "postulaciones": {
+          "hombres": null,
+          "mujeres": null
+        },
+        "adjudicaciones": {
+          "hombres": null,
+          "mujeres": null
+        },
+        "tasaAdjudicacionPct": {
+          "hombres": null,
+          "mujeres": null
+        }
+      },
+      "genderGapTable": [],
+      "insights": []
+    },
+    "financiera": {
+      "sectionNumber": "03",
+      "navLabel": "Gestion Financiera",
+      "tagLabel": "Ejecucion presupuestaria",
+      "title": "Gestion Financiera",
+      "subtitle": "Ejecucion presupuestaria 2025 por instrumento y categoria.",
+      "sources": [],
+      "kpis": [
+        {
+          "id": "ejecutadoCentros",
+          "label": "Ejecutado en Centros",
+          "value": null,
+          "format": "currency_clp_thousands"
+        },
+        {
+          "id": "ejecutadoProyectos",
+          "label": "Ejecutado en Proyectos",
+          "value": null,
+          "format": "currency_clp_thousands"
+        },
+        {
+          "id": "totalEjecutado",
+          "label": "Total Ejecutado 2024",
+          "value": null,
+          "format": "currency_clp_thousands"
+        }
+      ],
+      "budgetByInstrument": [
+        {
+          "instrument": "Centros Basales",
+          "amount": null
+        },
+        {
+          "instrument": "FONDAP",
+          "amount": null
+        },
+        {
+          "instrument": "Anillos Tematicos",
+          "amount": null
+        },
+        {
+          "instrument": "Equip. Mediano",
+          "amount": null
+        },
+        {
+          "instrument": "Inst. Milenio",
+          "amount": null
+        },
+        {
+          "instrument": "Nucleos Milenio",
+          "amount": null
+        },
+        {
+          "instrument": "Ctros. Regionales",
+          "amount": null
+        },
+        {
+          "instrument": "Equip. Mayor",
+          "amount": null
+        },
+        {
+          "instrument": "Excelencia Intl.",
+          "amount": null
+        },
+        {
+          "instrument": "Ctros. Tecnologicos",
+          "amount": null
+        },
+        {
+          "instrument": "Anillos C&T",
+          "amount": null
+        },
+        {
+          "instrument": "Ctros. Educacion",
+          "amount": null
+        },
+        {
+          "instrument": "Exped. Cientificas",
+          "amount": null
+        },
+        {
+          "instrument": "Ctros. Servicios",
+          "amount": null
+        },
+        {
+          "instrument": "PME",
+          "amount": null
+        },
+        {
+          "instrument": "Excedentes",
+          "amount": null
+        },
+        {
+          "instrument": "Gastos Operac.",
+          "amount": null
+        }
+      ],
+      "insights": []
+    },
+    "productividad": {
+      "sectionNumber": "04",
+      "navLabel": "Productividad",
+      "tagLabel": "Outputs de investigacion",
+      "title": "Productividad Cientifica",
+      "subtitle": "Publicaciones, patentes, formacion, congresos y divulgacion de los centros SCIA.",
+      "sources": [],
+      "publicaciones": {
+        "totalsByProgram": [
+          {
+            "program": "Institutos Milenio",
+            "total": null,
+            "q1": null
+          },
+          {
+            "program": "Nucleos Milenio",
+            "total": null,
+            "q1": null
+          },
+          {
+            "program": "Centros Basales",
+            "total": null
+          },
+          {
+            "program": "FONDAP",
+            "total": null
+          },
+          {
+            "program": "Anillos",
+            "total": null
+          }
+        ]
+      },
+      "patentes": {
+        "totalsByInstrument": [
+          {
+            "instrument": "Ctros. Basales",
+            "patentes": null,
+            "derechoAutor": null,
+            "marcas": null,
+            "secretoIndustrial": null,
+            "servicioPi": null
+          },
+          {
+            "instrument": "Inst. Milenio",
+            "patentes": null,
+            "derechoAutor": null,
+            "marcas": null,
+            "secretoIndustrial": null,
+            "servicioPi": null
+          },
+          {
+            "instrument": "Anillos",
+            "patentes": null,
+            "derechoAutor": null,
+            "marcas": null,
+            "secretoIndustrial": null,
+            "servicioPi": null
+          },
+          {
+            "instrument": "FONDAP",
+            "patentes": null,
+            "derechoAutor": null,
+            "marcas": null,
+            "secretoIndustrial": null,
+            "servicioPi": null
+          },
+          {
+            "instrument": "Nucleos",
+            "patentes": null,
+            "derechoAutor": null,
+            "marcas": null,
+            "secretoIndustrial": null,
+            "servicioPi": null
+          }
+        ]
+      },
+      "tesis": {
+        "kpis": [
+          {
+            "id": "totalTesis",
+            "label": "Tesis 2024",
+            "value": null,
+            "format": "integer"
+          },
+          {
+            "id": "pregradoPct",
+            "label": "Pregrado",
+            "value": null,
+            "format": "percentage"
+          },
+          {
+            "id": "magisterPct",
+            "label": "Magister",
+            "value": null,
+            "format": "percentage"
+          },
+          {
+            "id": "doctoradoPct",
+            "label": "Doctorado",
+            "value": null,
+            "format": "percentage"
+          }
+        ],
+        "levels": {
+          "pregrado": null,
+          "magister": null,
+          "doctorado": null
+        },
+        "distributionByInstrument": [
+          {
+            "instrument": "Ctros. Basales",
+            "pregrado": null,
+            "magister": null,
+            "doctorado": null
+          },
+          {
+            "instrument": "FONDAP",
+            "pregrado": null,
+            "magister": null,
+            "doctorado": null
+          },
+          {
+            "instrument": "Inst. Milenio",
+            "pregrado": null,
+            "magister": null,
+            "doctorado": null
+          },
+          {
+            "instrument": "Nucleos Milenio",
+            "pregrado": null,
+            "magister": null,
+            "doctorado": null
+          },
+          {
+            "instrument": "Anillos",
+            "pregrado": null,
+            "magister": null,
+            "doctorado": null
+          },
+          {
+            "instrument": "Ctros. Educacion",
+            "pregrado": null,
+            "magister": null,
+            "doctorado": null
+          },
+          {
+            "instrument": "Ctros. Regionales",
+            "pregrado": null,
+            "magister": null,
+            "doctorado": null
+          }
+        ]
+      },
+      "congresos": {
+        "kpis": [
+          {
+            "id": "presentaciones",
+            "label": "Presentaciones",
+            "value": null,
+            "format": "integer"
+          },
+          {
+            "id": "fueraChilePct",
+            "label": "Fuera de Chile",
+            "value": null,
+            "format": "percentage"
+          },
+          {
+            "id": "paises",
+            "label": "Paises",
+            "value": null,
+            "format": "integer"
+          },
+          {
+            "id": "centrosActivos",
+            "label": "Centros activos",
+            "value": null,
+            "format": "integer"
+          }
+        ],
+        "distributionByInstrument": [
+          {
+            "instrument": "Ctros. Basales",
+            "nacional": null,
+            "internacional": null
+          },
+          {
+            "instrument": "Inst. Milenio",
+            "nacional": null,
+            "internacional": null
+          },
+          {
+            "instrument": "Nucleos Milenio",
+            "nacional": null,
+            "internacional": null
+          },
+          {
+            "instrument": "FONDAP",
+            "nacional": null,
+            "internacional": null
+          },
+          {
+            "instrument": "Anillos",
+            "nacional": null,
+            "internacional": null
+          },
+          {
+            "instrument": "Ctros. Educacion",
+            "nacional": null,
+            "internacional": null
+          },
+          {
+            "instrument": "Ctros. Regionales",
+            "nacional": null,
+            "internacional": null
+          }
+        ]
+      },
+      "divulgacion": {
+        "kpis": [
+          {
+            "id": "actividades",
+            "label": "Actividades",
+            "value": null,
+            "format": "integer"
+          },
+          {
+            "id": "participantes",
+            "label": "Participantes",
+            "value": null,
+            "format": "integer"
+          },
+          {
+            "id": "promedioPorCentro",
+            "label": "Promedio por centro",
+            "value": null,
+            "format": "integer"
+          },
+          {
+            "id": "centrosParticipantes",
+            "label": "Centros participantes",
+            "value": null,
+            "format": "integer"
+          }
+        ],
+        "medianAttendanceByInstrument": [
+          {
+            "instrument": "Ctros. Basales",
+            "medianAttendance": null
+          },
+          {
+            "instrument": "FONDAP",
+            "medianAttendance": null
+          },
+          {
+            "instrument": "Anillos",
+            "medianAttendance": null
+          },
+          {
+            "instrument": "Ctros. Regionales",
+            "medianAttendance": null
+          },
+          {
+            "instrument": "Ctros. Educacion",
+            "medianAttendance": null
+          }
+        ]
+      },
+      "insights": []
+    },
+    "capitalHumano": {
+      "sectionNumber": "05",
+      "navLabel": "Capital Humano",
+      "tagLabel": "Equipo investigador",
+      "title": "Capital Humano",
+      "subtitle": "Composicion del equipo humano de los centros SCIA 2025 por genero y tramo etario.",
+      "sources": [],
+      "kpis": [
+        {
+          "id": "total",
+          "label": "Total personas",
+          "value": null,
+          "format": "integer"
+        },
+        {
+          "id": "hombres",
+          "label": "Hombres",
+          "value": null,
+          "format": "integer"
+        },
+        {
+          "id": "mujeres",
+          "label": "Mujeres",
+          "value": null,
+          "format": "integer"
+        },
+        {
+          "id": "mujeresPct",
+          "label": "Mujeres",
+          "value": null,
+          "format": "percentage"
+        },
+        {
+          "id": "tramo3554Pct",
+          "label": "Tramo 35-54",
+          "value": null,
+          "format": "percentage"
+        }
+      ],
+      "agePyramid": [
+        {
+          "ageRange": "65+",
+          "women": null,
+          "men": null
+        },
+        {
+          "ageRange": "60-64",
+          "women": null,
+          "men": null
+        },
+        {
+          "ageRange": "55-59",
+          "women": null,
+          "men": null
+        },
+        {
+          "ageRange": "50-54",
+          "women": null,
+          "men": null
+        },
+        {
+          "ageRange": "45-49",
+          "women": null,
+          "men": null
+        },
+        {
+          "ageRange": "40-44",
+          "women": null,
+          "men": null
+        },
+        {
+          "ageRange": "35-39",
+          "women": null,
+          "men": null
+        },
+        {
+          "ageRange": "30-34",
+          "women": null,
+          "men": null
+        },
+        {
+          "ageRange": "25-29",
+          "women": null,
+          "men": null
+        },
+        {
+          "ageRange": "<25",
+          "women": null,
+          "men": null
+        }
+      ],
+      "insights": []
+    },
+    "diversidad": {
+      "sectionNumber": "06",
+      "navLabel": "Diversidad",
+      "tagLabel": "Paridad e inclusion",
+      "title": "Diversidad & Equidad",
+      "subtitle": "Participacion femenina e indicadores de equidad de genero en los centros 2025.",
+      "sources": [],
+      "kpis": [
+        {
+          "id": "total",
+          "label": "Total personas",
+          "value": null,
+          "format": "integer"
+        },
+        {
+          "id": "mujeres",
+          "label": "Mujeres",
+          "value": null,
+          "format": "integer"
+        },
+        {
+          "id": "mujeresPct",
+          "label": "Participacion femenina",
+          "value": null,
+          "format": "percentage"
+        },
+        {
+          "id": "hombres",
+          "label": "Hombres",
+          "value": null,
+          "format": "integer"
+        },
+        {
+          "id": "hombresPct",
+          "label": "Participacion masculina",
+          "value": null,
+          "format": "percentage"
+        }
+      ],
+      "leadership": {
+        "razonHM": null,
+        "directivoFemeninoPct": null,
+        "liderazgoInvestigadorasPct": null,
+        "liderazgoJovenesPct": null
+      },
+      "femaleParticipationByInstrument": [
+        {
+          "instrument": "Ctro. Servicios",
+          "valuePct": null
+        },
+        {
+          "instrument": "Ctro. Educacion",
+          "valuePct": null
+        },
+        {
+          "instrument": "FONDAP",
+          "valuePct": null
+        },
+        {
+          "instrument": "Inst. Milenio",
+          "valuePct": null
+        },
+        {
+          "instrument": "Nucleos Milenio",
+          "valuePct": null
+        },
+        {
+          "instrument": "Ctros. Regionales",
+          "valuePct": null
+        },
+        {
+          "instrument": "Ctros. Basales",
+          "valuePct": null
+        },
+        {
+          "instrument": "Equip. Mediano",
+          "valuePct": null
+        }
+      ],
+      "insights": []
+    },
+    "territorio": {
+      "sectionNumber": "07",
+      "navLabel": "Territorio",
+      "tagLabel": "Distribucion geografica",
+      "title": "Cobertura Territorial",
+      "subtitle": "Distribucion geografica de las 494 iniciativas SCIA en las regiones de Chile.",
+      "sources": [],
+      "kpis": [
+        {
+          "id": "iniciativas",
+          "label": "Iniciativas",
+          "value": null,
+          "format": "integer"
+        },
+        {
+          "id": "regionesPrincipales",
+          "label": "Regiones principales",
+          "value": null,
+          "format": "integer"
+        },
+        {
+          "id": "regionesPrincipalesPct",
+          "label": "Participacion top 3",
+          "value": null,
+          "format": "percentage"
+        },
+        {
+          "id": "rmCount",
+          "label": "Region Metropolitana",
+          "value": null,
+          "format": "integer"
+        },
+        {
+          "id": "rmPct",
+          "label": "Region Metropolitana",
+          "value": null,
+          "format": "percentage"
+        }
+      ],
+      "regions": [
+        {
+          "mapId": "map_chile_Metropolitana",
+          "name": "Metropolitana",
+          "count": null,
+          "pct": null
+        },
+        {
+          "mapId": "map_chile_Valparaiso",
+          "name": "Valparaiso",
+          "count": null,
+          "pct": null
+        },
+        {
+          "mapId": "map_chile_Biobio",
+          "name": "Biobio",
+          "count": null,
+          "pct": null
+        },
+        {
+          "mapId": "map_chile_Antofagasta",
+          "name": "Antofagasta",
+          "count": null,
+          "pct": null
+        },
+        {
+          "mapId": "map_chile_Maule",
+          "name": "Maule",
+          "count": null,
+          "pct": null
+        },
+        {
+          "mapId": "map_chile_Coquimbo",
+          "name": "Coquimbo",
+          "count": null,
+          "pct": null
+        },
+        {
+          "mapId": "map_chile_Los_Rios",
+          "name": "Los Rios",
+          "count": null,
+          "pct": null
+        },
+        {
+          "mapId": "map_chile_Araucania",
+          "name": "Araucania",
+          "count": null,
+          "pct": null
+        },
+        {
+          "mapId": "map_chile_Tarapaca",
+          "name": "Tarapaca",
+          "count": null,
+          "pct": null
+        },
+        {
+          "mapId": "map_chile_Los_Lagos",
+          "name": "Los Lagos",
+          "count": null,
+          "pct": null
+        },
+        {
+          "mapId": "map_chile_AricaParinacota",
+          "name": "Arica y Parinacota",
+          "count": null,
+          "pct": null
+        },
+        {
+          "mapId": "map_chile_OHiggins",
+          "name": "O'Higgins",
+          "count": null,
+          "pct": null
+        },
+        {
+          "mapId": "map_chile_Nuble",
+          "name": "Nuble",
+          "count": null,
+          "pct": null
+        },
+        {
+          "mapId": "map_chile_Atacama",
+          "name": "Atacama",
+          "count": null,
+          "pct": null
+        },
+        {
+          "mapId": "map_chile_Aysen",
+          "name": "Aysen",
+          "count": null,
+          "pct": null
+        },
+        {
+          "mapId": "map_chile_Magallanes",
+          "name": "Magallanes",
+          "count": null,
+          "pct": null
+        }
+      ],
+      "insights": []
+    },
+    "vinculacion": {
+      "sectionNumber": "08",
+      "navLabel": "Vinculacion",
+      "tagLabel": "Impacto y transferencia",
+      "title": "Vinculacion & Ciencia con Impacto",
+      "subtitle": "Resumen UVE 2025 por dimension, articulacion institucional y vinculo con actores estrategicos.",
+      "sources": [],
+      "kpis": [
+        {
+          "id": "actividadesUve",
+          "label": "Actividades UVE",
+          "value": null,
+          "format": "integer"
+        },
+        {
+          "id": "participantes",
+          "label": "Participantes",
+          "value": null,
+          "format": "integer"
+        },
+        {
+          "id": "centrosParticipantes",
+          "label": "Centros participantes",
+          "value": null,
+          "format": "integer"
+        }
+      ],
+      "summary": {
+        "title": "",
+        "lead": ""
+      },
+      "dimensions": [
+        {
+          "id": "visibility",
+          "colorLabel": "Verde",
+          "title": "Visibilizar el quehacer de proyectos SCIA",
+          "description": "Posicionar la investigacion de los centros en espacios de alta visibilidad publica y acercarla a ciudadania, medios y estudiantes.",
+          "count": null,
+          "timeframe": "",
+          "badge": "Ciudadania",
+          "activities": []
+        },
+        {
+          "id": "associativity",
+          "colorLabel": "Rosa",
+          "title": "Asociatividad Centros y proyectos ANID",
+          "description": "Fortalecer comunidad, gobernanza, coordinacion interna y relevo entre equipos, centros, proyectos y actores de soporte del ecosistema SCIA.",
+          "count": null,
+          "timeframe": "",
+          "badge": "Comunidad",
+          "activities": []
+        },
+        {
+          "id": "ecosystem",
+          "colorLabel": "Turquesa",
+          "title": "Vinculacion con otros actores del ecosistema",
+          "description": "Conectar la ciencia financiada por ANID con industria, regiones, sector social y espacios de incidencia publica basados en evidencia.",
+          "count": null,
+          "timeframe": "",
+          "badge": "Ecosistema",
+          "activities": []
+        }
+      ],
+      "sourceNote": "",
+      "insights": [],
+      "scientificHighlights": {
+        "selectedCount": null,
+        "items": []
+      }
+    }
+  }
+}

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SCIA Virtual Yearbook - ANID</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "secondary-fixed-dim": "#ffb4a9",
+              "on-error": "#ffffff",
+              "secondary-container": "#e1271c",
+              "surface-container-lowest": "#ffffff",
+              "surface-container-highest": "#d3e4fe",
+              "error-container": "#ffdad6",
+              "surface-container": "#e5eeff",
+              "surface": "#f8f9ff",
+              "on-primary-fixed-variant": "#004884",
+              "on-primary-container": "#9ac3ff",
+              "surface-container-low": "#eff4ff",
+              "background": "#f8f9ff",
+              "on-tertiary-fixed": "#001f29",
+              "tertiary-container": "#00566c",
+              "on-primary-fixed": "#001c39",
+              "outline": "#727782",
+              "tertiary": "#003d4e",
+              "error": "#ba1a1a",
+              "on-error-container": "#93000a",
+              "tertiary-fixed": "#b9eaff",
+              "outline-variant": "#c2c6d2",
+              "inverse-on-surface": "#eaf1ff",
+              "on-surface-variant": "#424750",
+              "primary-container": "#005092",
+              "on-tertiary": "#ffffff",
+              "on-tertiary-fixed-variant": "#004d62",
+              "on-secondary-container": "#fffbff",
+              "surface-dim": "#cbdbf5",
+              "inverse-surface": "#213145",
+              "secondary-fixed": "#ffdad5",
+              "inverse-primary": "#a4c9ff",
+              "on-surface": "#0b1c30",
+              "primary-fixed-dim": "#a4c9ff",
+              "primary-fixed": "#d4e3ff",
+              "tertiary-fixed-dim": "#59d5fe",
+              "on-secondary-fixed-variant": "#930002",
+              "secondary": "#bc0004",
+              "on-secondary": "#ffffff",
+              "primary": "#00396b",
+              "surface-variant": "#d3e4fe",
+              "surface-tint": "#2160a2",
+              "surface-bright": "#f8f9ff",
+              "on-tertiary-container": "#52cff8",
+              "surface-container-high": "#dce9ff",
+              "on-primary": "#ffffff",
+              "on-background": "#0b1c30",
+              "on-secondary-fixed": "#410000"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(66, 71, 80, 0.1);
+        }
+        .ethereal-blob {
+            filter: blur(80px);
+            z-index: -1;
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface selection:bg-primary-container selection:text-on-primary-container overflow-x-hidden">
+<!-- Background Blobs -->
+<div class="fixed inset-0 overflow-hidden pointer-events-none">
+<div class="ethereal-blob absolute top-[-10%] left-[-5%] w-[40%] h-[40%] bg-primary/10 rounded-full"></div>
+<div class="ethereal-blob absolute bottom-[-10%] right-[-5%] w-[45%] h-[45%] bg-tertiary-fixed-dim/20 rounded-full"></div>
+<div class="ethereal-blob absolute top-[20%] right-[10%] w-[30%] h-[30%] bg-secondary/5 rounded-full"></div>
+</div>
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/70 backdrop-blur-xl border-b border-white/10 shadow-[0_20px_40px_rgba(11,28,48,0.06)] px-8 h-16 flex justify-between items-center">
+<div class="flex items-center gap-8">
+<span class="text-xl font-black text-[#00396b] tracking-tighter font-headline">SCIA Virtual Yearbook</span>
+<div class="hidden md:flex gap-6 items-center">
+<a class="text-[#00396b] border-b-2 border-[#00396b] pb-1 font-headline font-bold tracking-tight text-sm" href="#">Dashboard</a>
+<a class="text-slate-500 font-medium hover:text-[#00396b] transition-colors font-headline tracking-tight text-sm" href="#">Postulaciones</a>
+<a class="text-slate-500 font-medium hover:text-[#00396b] transition-colors font-headline tracking-tight text-sm" href="#">Concentración Regional</a>
+<a class="text-slate-500 font-medium hover:text-[#00396b] transition-colors font-headline tracking-tight text-sm" href="#">Info</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 text-slate-500 hover:bg-white/20 transition-all rounded-full">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="p-2 text-slate-500 hover:bg-white/20 transition-all rounded-full">
+<span class="material-symbols-outlined">settings</span>
+</button>
+<img alt="User Profile Avatar" class="w-8 h-8 rounded-full object-cover border-2 border-primary/20" data-alt="Professional user portrait for profile avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCb27f8f2clJQzdNPc8DWGasAy7dNBGetTjHRaNwKHqFwlMUINXbOlq2HotTtX6vwXJB0hQx5UoSh_xywC2gCvDuPHdU2kRbc2LzD81yi00di8dVxXZ5IgVtZ8wMgCFuBWVpLKg2-eGgzMkejT6785NQc5jby1A0iTKlaq5kvho0AiBCpCLqxZaM4gnZ_SSp_w2tBOYL4MoehKn-UhL5XbX5DTcowz8tWd4WqqBg5XApzlMxPPfnB98e_1rxfWgaJ6sTCi-mXE5_G0C"/>
+</div>
+</nav>
+<main class="pt-32 pb-20 px-8 max-w-7xl mx-auto">
+<!-- Hero Section -->
+<section class="relative mb-32">
+<div class="grid lg:grid-cols-2 gap-16 items-center">
+<div class="space-y-8">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-high text-primary font-mono text-xs font-bold tracking-widest">
+                        SCIA INSTITUTIONAL • 2024
+                    </div>
+<h1 class="font-headline text-6xl font-extrabold tracking-tight text-on-surface leading-[1.1]">
+                        Anuario Virtual SCIA <br/>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary-container">Innovación en Datos de Investigación</span>
+</h1>
+<p class="text-lg text-on-surface-variant max-w-xl leading-relaxed">
+                        Explora el ecosistema científico de Chile a través de una plataforma transparente que centraliza la gestión, el impacto y la evolución de la investigación institucional.
+                    </p>
+<div class="flex items-center gap-4">
+<button class="px-8 py-4 bg-gradient-to-br from-primary to-primary-container text-white rounded-xl font-bold shadow-lg hover:opacity-90 transition-opacity">
+                            Explorar Reportes
+                        </button>
+<button class="px-8 py-4 bg-surface-container-lowest/20 backdrop-blur-md border border-outline-variant/15 text-primary rounded-xl font-bold hover:bg-surface-container-low transition-colors">
+                            Saber Más
+                        </button>
+</div>
+</div>
+<!-- Global KPIs Glass Card -->
+<div class="glass-card p-10 rounded-[2rem] shadow-2xl relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-32 h-32 bg-secondary/5 rounded-full -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-700"></div>
+<h3 class="font-headline font-extrabold text-2xl text-primary mb-8 flex items-center gap-3">
+<span class="material-symbols-outlined">analytics</span> Indicadores Globales
+                    </h3>
+<div class="grid grid-cols-1 gap-8">
+<div class="flex items-center justify-between p-6 bg-white/40 rounded-2xl border border-white/20">
+<div>
+<p class="text-sm font-medium text-on-surface-variant">Centros de Investigación</p>
+<p class="text-4xl font-headline font-black text-on-surface mt-1">142</p>
+</div>
+<div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">hub</span>
+</div>
+</div>
+<div class="flex items-center justify-between p-6 bg-white/40 rounded-2xl border border-white/20">
+<div>
+<p class="text-sm font-medium text-on-surface-variant">Investigadores Activos</p>
+<p class="text-4xl font-headline font-black text-on-surface mt-1">3,840</p>
+</div>
+<div class="w-12 h-12 rounded-full bg-tertiary/10 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined">groups</span>
+</div>
+</div>
+<div class="flex items-center justify-between p-6 bg-white/40 rounded-2xl border border-white/20">
+<div>
+<p class="text-sm font-medium text-on-surface-variant">Tasa de Adjudicación</p>
+<p class="text-4xl font-headline font-black text-on-surface mt-1">24.8%</p>
+</div>
+<div class="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Overview Section: Bento Grid Cards -->
+<section class="mb-32">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+<div>
+<h2 class="font-headline text-4xl font-extrabold text-on-surface">Explora las Áreas</h2>
+<p class="text-on-surface-variant mt-2">Navegación directa por los pilares del anuario institucional.</p>
+</div>
+<div class="flex gap-2">
+<div class="w-12 h-1 h-1 bg-primary rounded-full"></div>
+<div class="w-4 h-1 bg-outline-variant/30 rounded-full"></div>
+<div class="w-4 h-1 bg-outline-variant/30 rounded-full"></div>
+</div>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<!-- Centros Card -->
+<div class="glass-card p-8 rounded-3xl hover:translate-y-[-8px] transition-all duration-300 flex flex-col group">
+<div class="w-14 h-14 rounded-2xl bg-surface-container-high flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-3xl">domain</span>
+</div>
+<h3 class="font-headline text-2xl font-bold mb-4">Centros</h3>
+<p class="text-on-surface-variant mb-8 flex-grow">Directorio completo de centros de excelencia y vinculación tecnológica a nivel nacional.</p>
+<a class="inline-flex items-center gap-2 text-primary font-bold hover:gap-4 transition-all group/link" href="#">
+                        Ver Directorio <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+<!-- Postulaciones Card -->
+<div class="glass-card p-8 rounded-3xl hover:translate-y-[-8px] transition-all duration-300 flex flex-col group">
+<div class="w-14 h-14 rounded-2xl bg-surface-container-high flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-3xl">assignment_turned_in</span>
+</div>
+<h3 class="font-headline text-2xl font-bold mb-4">Postulaciones</h3>
+<p class="text-on-surface-variant mb-8 flex-grow">Estadísticas detalladas sobre concursos, fondos adjudicados y demanda de financiamiento.</p>
+<a class="inline-flex items-center gap-2 text-primary font-bold hover:gap-4 transition-all group/link" href="#">
+                        Análisis de Datos <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+<!-- Regional Card -->
+<div class="glass-card p-8 rounded-3xl hover:translate-y-[-8px] transition-all duration-300 flex flex-col group">
+<div class="w-14 h-14 rounded-2xl bg-surface-container-high flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-3xl">map</span>
+</div>
+<h3 class="font-headline text-2xl font-bold mb-4">Despliegue Regional</h3>
+<p class="text-on-surface-variant mb-8 flex-grow">Visualización geográfica de la inversión y presencia institucional en todo el territorio.</p>
+<a class="inline-flex items-center gap-2 text-primary font-bold hover:gap-4 transition-all group/link" href="#">
+                        Ver Mapa <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- News Section -->
+<section class="mb-20">
+<div class="grid lg:grid-cols-12 gap-12 items-start">
+<div class="lg:col-span-4">
+<h2 class="font-headline text-4xl font-extrabold text-on-surface leading-tight">Últimas Noticias y Reportes</h2>
+<p class="text-on-surface-variant mt-4 mb-8">Mantente informado sobre las actualizaciones regulatorias y hallazgos destacados del sistema SCIA.</p>
+<button class="flex items-center gap-2 text-primary font-bold hover:underline">
+                        Suscribirse al Boletín <span class="material-symbols-outlined">mail</span>
+</button>
+</div>
+<div class="lg:col-span-8 grid gap-6">
+<div class="bg-white/40 p-6 rounded-2xl border border-white/30 flex gap-6 items-center hover:bg-white/60 transition-colors">
+<div class="hidden sm:block w-32 h-24 rounded-xl bg-surface-container-highest overflow-hidden">
+<img alt="Lab Research" class="w-full h-full object-cover" data-alt="High-tech laboratory research environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRJKgxaovSfZn4mhsGeArsJ6wMaRT-mrQRxUB5TnI-qiVlWWgdAT0MHWa1qp5WimZWchjg-v4UUXS587RWFhMy2HRl1q3Q60ylG6wt6b0pNb75RsjTC6i_PJaHgAXASyigih720oDVATvQS7bb2IfWQeo2dXdG3XapIsJNz8XGwPuUOfThZWrxYPYinEjeJK4KmsxhuFDcxkvKC-ka0WoW9L80WX-BS-mDiWZbAee5n6X-kRyuv9y312mTxdw60KDfSyFYxWzwKEw8"/>
+</div>
+<div class="flex-grow">
+<span class="text-[10px] font-bold tracking-widest text-secondary uppercase">Reporte Institucional</span>
+<h4 class="font-headline font-bold text-lg mt-1">Publicación de Resultados Concurso Anillos 2024</h4>
+<p class="text-sm text-on-surface-variant line-clamp-1">Se han disponibilizado los datos de la última convocatoria con un aumento del 15% en participación.</p>
+</div>
+<button class="p-2 bg-surface-container-high rounded-full text-primary">
+<span class="material-symbols-outlined">download</span>
+</button>
+</div>
+<div class="bg-white/40 p-6 rounded-2xl border border-white/30 flex gap-6 items-center hover:bg-white/60 transition-colors">
+<div class="hidden sm:block w-32 h-24 rounded-xl bg-surface-container-highest overflow-hidden">
+<img alt="Data Visualization" class="w-full h-full object-cover" data-alt="Stylized business data visualization on screen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHwZwsYRD61C3NAvXfwbLaAPrNiQdXVQfyEt9-hCrVsFnGhJec4J-3zKtVEJALvsYuS9dYNuUmu8byqMv0-zYxCuZeL2RqBXKt04Nv9LDCe3dHt0bAOrDnbtGcvD-FgWNjMxuWah4yQZEVNJeIo8kVUK0Plke0vSxZW0lXoxttumU4rimjMHgPwMfCXIaqT1Ij_LX6B_uXiZ1ZM1kiO1jDrYnhn2nSc2yDhjfqixmkEgN-xmDcTSnA6T_eOmGNjIbMwJjvM9RWWnjr"/>
+</div>
+<div class="flex-grow">
+<span class="text-[10px] font-bold tracking-widest text-primary uppercase">Actualización de Plataforma</span>
+<h4 class="font-headline font-bold text-lg mt-1">Nuevos Filtros de Búsqueda Avanzada por ODS</h4>
+<p class="text-sm text-on-surface-variant line-clamp-1">Ahora puedes filtrar proyectos según su impacto en los Objetivos de Desarrollo Sostenible.</p>
+</div>
+<button class="p-2 bg-surface-container-high rounded-full text-primary">
+<span class="material-symbols-outlined">arrow_outward</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full border-t border-slate-200 bg-[#f8f9ff] px-12 py-12 flex flex-col md:flex-row justify-between items-start gap-12">
+<div class="max-w-sm">
+<span class="text-sm font-bold text-[#0b1c30] block mb-4">ANID - SCIA Virtual Yearbook</span>
+<p class="font-['Inter'] text-xs text-slate-500 leading-relaxed">
+                Plataforma institucional para la transparencia y difusión del conocimiento científico. Gestión de datos avanzada para el fortalecimiento del ecosistema de CTI.
+            </p>
+</div>
+<div class="grid grid-cols-2 gap-12">
+<div>
+<h5 class="text-xs font-bold text-primary mb-4 uppercase tracking-widest">Plataforma</h5>
+<ul class="space-y-3 font-['Inter'] text-xs text-slate-500">
+<li><a class="hover:text-[#00396b] transition-colors" href="#">Dashboard</a></li>
+<li><a class="hover:text-[#00396b] transition-colors" href="#">Archivo SCIA</a></li>
+<li><a class="hover:text-[#00396b] transition-colors" href="#">Metodología</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-xs font-bold text-primary mb-4 uppercase tracking-widest">Soporte</h5>
+<ul class="space-y-3 font-['Inter'] text-xs text-slate-500">
+<li><a class="hover:text-[#00396b] transition-colors" href="#">Terms of Service</a></li>
+<li><a class="hover:text-[#00396b] transition-colors" href="#">Accessibility</a></li>
+<li><a class="hover:text-[#00396b] transition-colors" href="#">Contact Support</a></li>
+</ul>
+</div>
+</div>
+<div class="w-full md:w-auto mt-8 pt-8 border-t border-slate-200 md:border-t-0 md:mt-0 md:pt-0">
+<p class="font-['Inter'] text-xs text-slate-500">
+                © 2024 ANID - Institutional Virtual Yearbook. All rights reserved.
+            </p>
+</div>
+</footer>
+</body></html>

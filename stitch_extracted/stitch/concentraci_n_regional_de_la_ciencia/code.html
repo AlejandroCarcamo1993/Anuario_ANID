@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Concentración Regional | SCIA Virtual Yearbook</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "secondary-fixed-dim": "#ffb4a9",
+              "on-error": "#ffffff",
+              "secondary-container": "#e1271c",
+              "surface-container-lowest": "#ffffff",
+              "surface-container-highest": "#d3e4fe",
+              "error-container": "#ffdad6",
+              "surface-container": "#e5eeff",
+              "surface": "#f8f9ff",
+              "on-primary-fixed-variant": "#004884",
+              "on-primary-container": "#9ac3ff",
+              "surface-container-low": "#eff4ff",
+              "background": "#f8f9ff",
+              "on-tertiary-fixed": "#001f29",
+              "tertiary-container": "#00566c",
+              "on-primary-fixed": "#001c39",
+              "outline": "#727782",
+              "tertiary": "#003d4e",
+              "error": "#ba1a1a",
+              "on-error-container": "#93000a",
+              "tertiary-fixed": "#b9eaff",
+              "outline-variant": "#c2c6d2",
+              "inverse-on-surface": "#eaf1ff",
+              "on-surface-variant": "#424750",
+              "primary-container": "#005092",
+              "on-tertiary": "#ffffff",
+              "on-tertiary-fixed-variant": "#004d62",
+              "on-secondary-container": "#fffbff",
+              "surface-dim": "#cbdbf5",
+              "inverse-surface": "#213145",
+              "secondary-fixed": "#ffdad5",
+              "inverse-primary": "#a4c9ff",
+              "on-surface": "#0b1c30",
+              "primary-fixed-dim": "#a4c9ff",
+              "primary-fixed": "#d4e3ff",
+              "tertiary-fixed-dim": "#59d5fe",
+              "on-secondary-fixed-variant": "#930002",
+              "secondary": "#bc0004",
+              "on-secondary": "#ffffff",
+              "primary": "#00396b",
+              "surface-variant": "#d3e4fe",
+              "surface-tint": "#2160a2",
+              "surface-bright": "#f8f9ff",
+              "on-tertiary-container": "#52cff8",
+              "surface-container-high": "#dce9ff",
+              "on-primary": "#ffffff",
+              "on-background": "#0b1c30",
+              "on-secondary-fixed": "#410000"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(66, 71, 80, 0.1);
+        }
+        .beveled-edge {
+            border-top: 1px solid rgba(66, 71, 80, 0.1);
+            border-left: 1px solid rgba(66, 71, 80, 0.1);
+        }
+        .map-pulse {
+            animation: pulse-slow 3s infinite;
+        }
+        @keyframes pulse-slow {
+            0%, 100% { transform: scale(1); opacity: 0.8; }
+            50% { transform: scale(1.2); opacity: 0.4; }
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 border-b border-white/10 bg-white/70 backdrop-blur-xl shadow-[0_20px_40px_rgba(11,28,48,0.06)] flex justify-between items-center w-full px-8 h-16">
+<div class="flex items-center gap-4">
+<span class="text-xl font-black text-[#00396b] tracking-tighter font-headline">SCIA Virtual Yearbook</span>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-slate-500 font-medium hover:text-[#00396b] transition-colors font-headline text-sm" href="#">Dashboard</a>
+<a class="text-slate-500 font-medium hover:text-[#00396b] transition-colors font-headline text-sm" href="#">Postulaciones</a>
+<a class="text-[#00396b] border-b-2 border-[#00396b] pb-1 font-headline text-sm font-bold tracking-tight" href="#">Concentración Regional</a>
+<a class="text-slate-500 font-medium hover:text-[#00396b] transition-colors font-headline text-sm" href="#">Info</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="p-2 text-slate-500 hover:bg-white/20 transition-all rounded-full">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="p-2 text-slate-500 hover:bg-white/20 transition-all rounded-full">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+<div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center overflow-hidden border border-outline-variant/20">
+<img alt="User Profile Avatar" data-alt="Close up professional portrait of a user avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-CEAqV7zgZEZVJTd_uA3vPszwFlxTzYOvJ8qoK02eE7vgCHYiNWOG2M-iPKwqMy2-GExstgz4Y-KMeGLT4VD_IM-f4wG7dPL_0deU4e9Q_3l9xtid1IKN-DN41WfC6iuWuyGYhcqBxlG5_OO8rVSmuuFGJmGI99y-nFpwWCRCL06zNvzhLRDhbrNQMyw3pPAZ89QjQig7FYIGfjZDA1ycC6T-k6I7Iaag-e4NPabI5sekktK2h0-TSdp3fglGfzR5M3arpQYDbC3O"/>
+</div>
+</div>
+</header>
+<!-- SideNavBar -->
+<aside class="fixed left-0 top-16 h-[calc(100vh-64px)] w-64 border-r border-white/10 bg-[#f8f9ff]/80 backdrop-blur-lg flex flex-col py-6 z-40 hidden md:flex">
+<div class="px-6 mb-8">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-white">
+<span class="material-symbols-outlined" data-icon="account_balance">account_balance</span>
+</div>
+<div>
+<h3 class="font-headline font-extrabold text-[#00396b] text-sm leading-tight">SCIA Archive</h3>
+<p class="text-xs text-slate-500">Institutional Records</p>
+</div>
+</div>
+</div>
+<nav class="flex-1 space-y-1 px-2">
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-[#e5eeff] rounded-lg transition-transform duration-200 hover:translate-x-1 font-medium text-sm" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span>Overview</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 bg-[#00396b] text-white rounded-lg transition-transform duration-200 font-medium text-sm" href="#">
+<span class="material-symbols-outlined" data-icon="map">map</span>
+<span>Regional Data</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-[#e5eeff] rounded-lg transition-transform duration-200 hover:translate-x-1 font-medium text-sm" href="#">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+<span>Institutional Stats</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-[#e5eeff] rounded-lg transition-transform duration-200 hover:translate-x-1 font-medium text-sm" href="#">
+<span class="material-symbols-outlined" data-icon="history">history</span>
+<span>Archive</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-[#e5eeff] rounded-lg transition-transform duration-200 hover:translate-x-1 font-medium text-sm" href="#">
+<span class="material-symbols-outlined" data-icon="description">description</span>
+<span>Reports</span>
+</a>
+</nav>
+<div class="px-4 mt-auto space-y-4">
+<button class="w-full py-3 bg-gradient-to-r from-primary to-primary-container text-white rounded-xl font-bold text-sm shadow-lg shadow-primary/10 transition-transform active:scale-95">
+                Export Data
+            </button>
+<div class="pt-4 border-t border-slate-200/50 space-y-1">
+<a class="flex items-center gap-3 px-4 py-2 text-slate-500 hover:text-primary text-xs transition-colors" href="#">
+<span class="material-symbols-outlined text-sm" data-icon="help">help</span>
+<span>Support</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 text-slate-500 hover:text-primary text-xs transition-colors" href="#">
+<span class="material-symbols-outlined text-sm" data-icon="security">security</span>
+<span>Privacy</span>
+</a>
+</div>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="md:ml-64 pt-16 min-h-screen relative flex flex-col">
+<!-- Hero Title -->
+<div class="px-12 pt-12 pb-6">
+<h1 class="font-headline text-5xl font-extrabold tracking-tight text-primary leading-none">Concentración <span class="text-tertiary-fixed-dim">Regional</span></h1>
+<p class="mt-4 text-slate-600 max-w-2xl font-body text-lg">Distribución estratégica de centros de investigación y capital humano avanzado a lo largo del territorio nacional chileno.</p>
+</div>
+<div class="flex-1 px-12 pb-12 relative flex gap-8">
+<!-- Map Container -->
+<div class="flex-1 bg-surface-container-low rounded-3xl relative overflow-hidden flex items-center justify-center p-8 group">
+<!-- Decorative Grid Background -->
+<div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: radial-gradient(#00396b 1px, transparent 1px); background-size: 32px 32px;"></div>
+<!-- Map Placeholder Representation -->
+<div class="relative h-full w-full max-w-md flex items-center justify-center">
+<img alt="Chile Regional Map" class="h-full object-contain opacity-40 grayscale" data-alt="Stylized map of Chile with regional borders" data-location="Chile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3EJoTQz4sOTO9o441OTCreH9t2q4WK3PDG9HvB7hzk8peR4IpF-VDHWkvMxDTUI4EADBANjm-ics4e4wu9Js5f5DS3YKndt91_aseSYiGmjZRGN_2cYy1dyYG4tBEFB1jJukrDF4LEcdMslnPATF5aSA17cOcaHgwlbuhqETZGsnBRHqe7n_GoiZLJo65kdbNCR-QUO5GGJcTSgtXUdrXuEQ8LaxsZrV8W4gXrUOAcshvCyE02hc59u5dicz6dvaLBO5oVHXd7F_F"/>
+<!-- Concentration Markers -->
+<!-- Antofagasta -->
+<div class="absolute top-[20%] left-[45%] group/marker">
+<div class="w-4 h-4 bg-secondary rounded-full map-pulse cursor-pointer"></div>
+<div class="absolute bottom-6 left-1/2 -translate-x-1/2 bg-on-surface text-white text-[10px] px-2 py-1 rounded opacity-0 group-hover/marker:opacity-100 transition-opacity whitespace-nowrap">Antofagasta</div>
+</div>
+<!-- Valparaiso -->
+<div class="absolute top-[45%] left-[42%] group/marker">
+<div class="w-6 h-6 bg-primary rounded-full map-pulse cursor-pointer"></div>
+<div class="absolute bottom-8 left-1/2 -translate-x-1/2 bg-on-surface text-white text-[10px] px-2 py-1 rounded opacity-0 group-hover/marker:opacity-100 transition-opacity whitespace-nowrap">Valparaíso</div>
+</div>
+<!-- Santiago -->
+<div class="absolute top-[48%] left-[45%] group/marker">
+<div class="w-8 h-8 bg-tertiary rounded-full map-pulse cursor-pointer ring-4 ring-tertiary/20"></div>
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 bg-on-surface text-white text-[10px] px-2 py-1 rounded opacity-0 group-hover/marker:opacity-100 transition-opacity whitespace-nowrap">Metropolitana</div>
+</div>
+<!-- Bio Bio -->
+<div class="absolute top-[58%] left-[40%] group/marker">
+<div class="w-5 h-5 bg-secondary rounded-full map-pulse cursor-pointer"></div>
+<div class="absolute bottom-7 left-1/2 -translate-x-1/2 bg-on-surface text-white text-[10px] px-2 py-1 rounded opacity-0 group-hover/marker:opacity-100 transition-opacity whitespace-nowrap">Biobío</div>
+</div>
+<!-- Los Lagos -->
+<div class="absolute top-[72%] left-[38%] group/marker">
+<div class="w-3 h-3 bg-primary rounded-full map-pulse cursor-pointer"></div>
+<div class="absolute bottom-5 left-1/2 -translate-x-1/2 bg-on-surface text-white text-[10px] px-2 py-1 rounded opacity-0 group-hover/marker:opacity-100 transition-opacity whitespace-nowrap">Los Lagos</div>
+</div>
+</div>
+<!-- Floating Legend -->
+<div class="absolute bottom-6 left-6 glass-panel rounded-xl p-4 beveled-edge shadow-lg">
+<h4 class="text-xs font-bold text-primary mb-3 uppercase tracking-widest">Leyenda</h4>
+<div class="space-y-2">
+<div class="flex items-center gap-2 text-xs">
+<span class="w-3 h-3 rounded-full bg-tertiary"></span>
+<span>Alta Concentración (&gt;50)</span>
+</div>
+<div class="flex items-center gap-2 text-xs">
+<span class="w-3 h-3 rounded-full bg-primary"></span>
+<span>Media Concentración (20-50)</span>
+</div>
+<div class="flex items-center gap-2 text-xs">
+<span class="w-3 h-3 rounded-full bg-secondary"></span>
+<span>Emergente (&lt;20)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Side Panel (Glassmorphic) -->
+<div class="w-96 glass-panel rounded-3xl p-8 beveled-edge shadow-2xl flex flex-col h-full border-white/40">
+<div class="flex justify-between items-start mb-8">
+<div>
+<span class="font-mono text-[10px] font-bold text-tertiary-container uppercase tracking-tighter">SCIA-REGIONAL-2024</span>
+<h2 class="text-3xl font-headline font-extrabold text-primary">Metropolitana</h2>
+<p class="text-sm text-slate-500 font-medium">Región Núcleo de Investigación</p>
+</div>
+<span class="material-symbols-outlined text-primary-container" data-icon="location_on">location_on</span>
+</div>
+<div class="space-y-8 flex-1">
+<!-- Stat 1 -->
+<div class="group/stat">
+<div class="flex justify-between items-end mb-2">
+<p class="text-sm font-semibold text-slate-600">Número de Centros</p>
+<span class="text-3xl font-headline font-black text-primary">124</span>
+</div>
+<div class="h-2 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-gradient-to-r from-primary to-primary-container w-[85%] rounded-full"></div>
+</div>
+</div>
+<!-- Stat 2 -->
+<div class="group/stat">
+<div class="flex justify-between items-end mb-2">
+<p class="text-sm font-semibold text-slate-600">Investigadores</p>
+<span class="text-3xl font-headline font-black text-primary">3,842</span>
+</div>
+<div class="h-2 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-gradient-to-r from-tertiary to-tertiary-fixed-dim w-[92%] rounded-full"></div>
+</div>
+</div>
+<!-- Areas List -->
+<div>
+<p class="text-sm font-bold text-primary mb-4 uppercase tracking-wider">Áreas Científicas Principales</p>
+<div class="space-y-3">
+<div class="flex items-center gap-4 p-3 rounded-xl hover:bg-white/40 transition-colors">
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-xl" data-icon="biotech">biotech</span>
+</div>
+<div>
+<p class="text-sm font-bold text-on-surface">Biomedicina</p>
+<p class="text-xs text-slate-500">42 Centros Activos</p>
+</div>
+</div>
+<div class="flex items-center gap-4 p-3 rounded-xl hover:bg-white/40 transition-colors">
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-xl" data-icon="computer">computer</span>
+</div>
+<div>
+<p class="text-sm font-bold text-on-surface">Tecnologías Digitales</p>
+<p class="text-xs text-slate-500">35 Centros Activos</p>
+</div>
+</div>
+<div class="flex items-center gap-4 p-3 rounded-xl hover:bg-white/40 transition-colors">
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-xl" data-icon="energy_savings_leaf">energy_savings_leaf</span>
+</div>
+<div>
+<p class="text-sm font-bold text-on-surface">Energía y Medio Ambiente</p>
+<p class="text-xs text-slate-500">28 Centros Activos</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<button class="mt-8 w-full py-4 border-2 border-primary/10 text-primary rounded-xl font-bold hover:bg-primary hover:text-white transition-all duration-300 flex items-center justify-center gap-2 group/btn">
+<span>Ver Detalles de la Región</span>
+<span class="material-symbols-outlined group-hover/btn:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Footer Component -->
+<footer class="w-full border-t border-slate-200 dark:border-slate-800 bg-[#f8f9ff] flex flex-col md:flex-row justify-between items-center px-12 py-8 mt-auto">
+<div class="mb-4 md:mb-0">
+<span class="text-sm font-bold text-[#0b1c30] dark:text-white">ANID</span>
+<p class="font-['Inter'] text-xs text-slate-500 mt-1">© 2024 ANID - Institutional Virtual Yearbook. All rights reserved.</p>
+</div>
+<div class="flex gap-6">
+<a class="font-['Inter'] text-xs text-slate-500 hover:text-[#00396b] transition-colors" href="#">Terms of Service</a>
+<a class="font-['Inter'] text-xs text-slate-500 hover:text-[#00396b] transition-colors" href="#">Accessibility</a>
+<a class="font-['Inter'] text-xs text-slate-500 hover:text-[#00396b] transition-colors" href="#">Contact Support</a>
+<a class="font-['Inter'] text-xs text-slate-500 hover:text-[#00396b] underline font-semibold transition-colors" href="#">Archive Policy</a>
+</div>
+</footer>
+</main>
+<!-- FAB (Suppressed on Details according to instructions, but logic-wise for "Home/Dashboard" equivalent of map, we include a search) -->
+<button class="fixed bottom-8 right-8 w-14 h-14 bg-primary text-white rounded-full shadow-2xl shadow-primary/40 flex items-center justify-center hover:scale-110 active:scale-95 transition-transform z-50">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</button>
+</body></html>

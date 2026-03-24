@@ -1,0 +1,64 @@
+{
+  "generatedAt": "2026-03-24",
+  "status": {
+    "legacySiteUntouched": true,
+    "reactShellBuilds": true,
+    "dataValidationHasErrors": false,
+    "dataValidationWarnings": 4
+  },
+  "sourceOfTruth": {
+    "data": "data/2024.json",
+    "shell": "app/",
+    "legacy": "index.html"
+  },
+  "scaffolds": [
+    "handoff/scaffolds/2025.scaffold.json"
+  ],
+  "sectionsMigrated": [
+    "panorama",
+    "postulacion",
+    "financiera",
+    "productividad",
+    "capitalHumano",
+    "diversidad",
+    "territorio",
+    "vinculacion"
+  ],
+  "entryPoints": {
+    "app": "app/src/App.jsx",
+    "sectionRegistry": "app/src/sectionRegistry.jsx",
+    "validator": "scripts/validate.js",
+    "yearScaffold": "scripts/scaffold-year.js",
+    "handoff": "handoff/HANDOFF_2026-03-24.md"
+  },
+  "commands": {
+    "dev": "npm run app:dev",
+    "build": "npm run app:build",
+    "validate": "npm run validate:data",
+    "validateStrict": "npm run validate:data:strict",
+    "scaffold2025": "npm run scaffold:year -- 2025"
+  },
+  "warnings": [
+    {
+      "path": "sections.financiera.kpis",
+      "message": "Ejecutado en centros + proyectos no coincide con totalEjecutado."
+    },
+    {
+      "path": "sections.productividad.congresos.distributionByInstrument",
+      "message": "El desglose de congresos suma 6842 y no 6867."
+    },
+    {
+      "path": "sections.capitalHumano.agePyramid",
+      "message": "La piramide suma 1717 hombres y no 1737."
+    },
+    {
+      "path": "sections.territorio.regions",
+      "message": "La suma regional es 475 y no 494."
+    }
+  ],
+  "nextRecommendedTasks": [
+    "Poblar data/2025.json con el mismo contrato.",
+    "Construir vistas comparativas 2024 vs 2025 en el shell React.",
+    "Resolver o documentar formalmente las 4 advertencias del dataset 2024."
+  ]
+}
