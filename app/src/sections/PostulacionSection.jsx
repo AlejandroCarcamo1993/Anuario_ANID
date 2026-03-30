@@ -70,7 +70,7 @@ export function PostulacionSection({ section, formatValue }) {
         <article className="panel-card">
           <span className="eyebrow">Postulaciones y adjudicaciones por género</span>
           <div className="chart-wrap chart-wrap--bar">
-            <Bar data={barData} options={barOptions} />
+            <Bar data={barData} options={barOptions} aria-label="Gráfico de barras: postulaciones y adjudicaciones por género" role="img" />
           </div>
         </article>
       </div>

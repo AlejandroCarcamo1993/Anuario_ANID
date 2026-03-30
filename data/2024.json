@@ -11,7 +11,7 @@
     "notes": [
       "El archivo consolida datos numericos, textos editoriales y bloques hardcodeados relevantes para la capa de presentacion.",
       "Fuente oficial: Anuario 2024 - ANID 30.12 (5).pdf. Todos los valores numericos fueron reconciliados contra el PDF.",
-      "Advertencias conocidas: (1) financiera — ejecutadoCentros + ejecutadoProyectos != totalEjecutado por diferencia de alcance (instrumentos excluidos del perimetro publicado); (2) congresos — distribucion por instrumento suma 6842, KPI 6867 (25 presentaciones apoyo Milenio sin categoria asignable); (3) territorio — regiones suman 475, KPI 494 (19 iniciativas con presencia multi-regional contadas una vez en KPI).",
+      "Advertencias conocidas: (1) financiera — fuente oficial es Programa de Caja 2024 (vigente+finalizado); total M$94.642.834; (2) congresos — 6.894 registros validados desde Excel (Centros 3.962 + Milenio 2.932); (3) territorio — regiones suman 475, KPI fijado en 475 (eliminada discrepancia anterior); (4) iniciativas — 72 centros + 385 proyectos = 457 total (corregido desde 473); (5) tesis — 1.731 registros validados (Centros 1.174 + Milenio 557); (6) divulgacion — 4.124 actividades (Centros 2.994 + Milenio 1.130); participantes solo disponibles para Milenio (2.359.046).",
       "Piramide etaria: 13 bandas quinquenales del PDF. Mujeres suman 1070, hombres suman 1737, coinciden con KPIs."
     ]
   },
@@ -31,7 +31,7 @@
     "statPills": [
       {
         "label": "Iniciativas",
-        "value": 473
+        "value": 457
       },
       {
         "label": "Centros",
@@ -69,7 +69,7 @@
         {
           "id": "iniciativas",
           "label": "Iniciativas",
-          "value": 473,
+          "value": 457,
           "format": "integer"
         },
         {
@@ -81,13 +81,13 @@
         {
           "id": "proyectos",
           "label": "Proyectos",
-          "value": 307,
+          "value": 385,
           "format": "integer"
         },
         {
           "id": "presupuesto",
           "label": "Presupuesto 2024",
-          "value": 88190665,
+          "value": 94642834,
           "format": "currency_clp_thousands"
         }
       ],
@@ -203,102 +203,164 @@
       "title": "Gestion Financiera",
       "subtitle": "Ejecucion presupuestaria 2024 por instrumento y categoria.",
       "sources": [
-        "SCIA Programa de Caja 2024"
+        "SCIA Programa de Caja 2024-2025"
       ],
       "kpis": [
         {
-          "id": "ejecutadoCentros",
-          "label": "Ejecutado en Centros",
+          "id": "centros2024",
+          "label": "Centros 2024",
           "value": 64358830,
           "format": "currency_clp_thousands"
         },
         {
-          "id": "ejecutadoProyectos",
-          "label": "Ejecutado en Proyectos",
-          "value": 80129246,
+          "id": "proyectos2024",
+          "label": "Proyectos 2024",
+          "value": 30284004,
           "format": "currency_clp_thousands"
         },
         {
-          "id": "totalEjecutado",
-          "label": "Total Ejecutado 2024",
-          "value": 88190665,
+          "id": "total2024",
+          "label": "Total 2024",
+          "value": 94642834,
+          "format": "currency_clp_thousands"
+        },
+        {
+          "id": "centros2025",
+          "label": "Centros 2025",
+          "value": 37254969,
+          "format": "currency_clp_thousands"
+        },
+        {
+          "id": "proyectos2025",
+          "label": "Proyectos 2025",
+          "value": 9928313,
+          "format": "currency_clp_thousands"
+        },
+        {
+          "id": "total2025",
+          "label": "Total 2025",
+          "value": 47183282,
           "format": "currency_clp_thousands"
         }
       ],
       "budgetByInstrument": [
         {
           "instrument": "Centros Basales",
-          "amount": 19952513
+          "amount": 25277643,
+          "category": "centro"
         },
         {
           "instrument": "FONDAP",
-          "amount": 13957323
-        },
-        {
-          "instrument": "Anillos Tematicos",
-          "amount": 8942208
-        },
-        {
-          "instrument": "Equip. Mediano",
-          "amount": 8567729
+          "amount": 12183754,
+          "category": "centro"
         },
         {
           "instrument": "Inst. Milenio",
-          "amount": 8465252
+          "amount": 11740000,
+          "category": "centro"
         },
         {
-          "instrument": "Nucleos Milenio",
-          "amount": 6065641
+          "instrument": "Anillos",
+          "amount": 10722766,
+          "category": "proyecto"
+        },
+        {
+          "instrument": "Equip. Mediano",
+          "amount": 8359134,
+          "category": "proyecto"
+        },
+        {
+          "instrument": "Núcleos Milenio",
+          "amount": 6065642,
+          "category": "proyecto"
         },
         {
           "instrument": "Ctros. Regionales",
-          "amount": 5569276
+          "amount": 5569277,
+          "category": "centro"
         },
         {
           "instrument": "Equip. Mayor",
-          "amount": 4774075
+          "amount": 4705354,
+          "category": "proyecto"
         },
         {
-          "instrument": "Excelencia Intl.",
-          "amount": 4535084
+          "instrument": "Ctros. Internacionales",
+          "amount": 4534672,
+          "category": "centro"
         },
         {
-          "instrument": "Ctros. Tecnologicos",
-          "amount": 2095583
+          "instrument": "Ctros. Tecnológicos",
+          "amount": 3023484,
+          "category": "centro"
         },
         {
-          "instrument": "Anillos C&T",
-          "amount": 1689120
-        },
-        {
-          "instrument": "Ctros. Educacion",
-          "amount": 1400000
-        },
-        {
-          "instrument": "Exped. Cientificas",
-          "amount": 990185
+          "instrument": "Ctros. Educación",
+          "amount": 1400000,
+          "category": "centro"
         },
         {
           "instrument": "Ctros. Servicios",
-          "amount": 630000
+          "amount": 630000,
+          "category": "centro"
         },
         {
-          "instrument": "PME",
-          "amount": 205628
-        },
-        {
-          "instrument": "Excedentes",
-          "amount": 199654
-        },
-        {
-          "instrument": "Gastos Operac.",
-          "amount": 151394
+          "instrument": "T. Buque Oceanog.",
+          "amount": 431108,
+          "category": "proyecto"
         }
       ],
       "insights": [
         {
           "title": "Lectura clave · Distribucion presupuestaria",
-          "body": "Los Centros Basales lideran con M$19.952.513 (31% del presupuesto de centros), consolidando la apuesta por ciencia fundamental de largo plazo. Llama la atencion que Equipamiento Mediano y Mayor suman M$13.341.804, evidenciando una inversion sostenida en capacidades de investigacion de las universidades. El presupuesto de Proyectos (M$80.129.246) supera al de Centros (M$64.358.830), lo que refleja la predominancia de instrumentos competitivos de corto y mediano plazo en el ecosistema SCIA."
+          "body": "Centros Basales lideran el presupuesto de centros con M$25.277.643 (39% del total centros), seguidos por FONDAP (M$12.183.754) e Institutos Milenio (M$11.740.000). En proyectos, Anillos concentran M$10.722.766. Para 2025, el presupuesto total cae a M$47.183.282, con Centros Basales e Institutos Milenio como los instrumentos con mayor continuidad presupuestaria."
+        }
+      ],
+      "budgetByInstrument2025": [
+        {
+          "instrument": "Centros Basales",
+          "amount": 14335147,
+          "category": "centro"
+        },
+        {
+          "instrument": "Inst. Milenio",
+          "amount": 11951680,
+          "category": "centro"
+        },
+        {
+          "instrument": "Ctros. Regionales",
+          "amount": 5938142,
+          "category": "centro"
+        },
+        {
+          "instrument": "Anillos",
+          "amount": 5452500,
+          "category": "proyecto"
+        },
+        {
+          "instrument": "Núcleos Milenio",
+          "amount": 4475813,
+          "category": "proyecto"
+        },
+        {
+          "instrument": "Ctros. Tecnológicos",
+          "amount": 1950000,
+          "category": "centro"
+        },
+        {
+          "instrument": "Ctros. Educación",
+          "amount": 1400000,
+          "category": "centro"
+        },
+        {
+          "instrument": "FONDAP",
+          "amount": 1050000,
+          "category": "centro"
+        },
+        {
+          "instrument": "Ctros. Servicios",
+          "amount": 630000,
+          "category": "centro"
         }
       ]
     },
@@ -309,8 +371,8 @@
       "title": "Productividad Cientifica",
       "subtitle": "Publicaciones, patentes, formacion, congresos y divulgacion de los centros SCIA.",
       "sources": [
-        "DB Proyectos SCIA 26.06",
-        "Base Investigadores SCIA 2024"
+        "Productividad Cientifica Centros 2024 (Excel)",
+        "Productividad Cientifica Milenio 2024 (Excel)"
       ],
       "publicaciones": {
         "totalsByProgram": [
@@ -350,9 +412,9 @@
           },
           {
             "instrument": "Inst. Milenio",
-            "patentes": 10,
+            "patentes": 20,
             "derechoAutor": 1,
-            "marcas": 0,
+            "marcas": 1,
             "secretoIndustrial": 0,
             "servicioPi": 0
           },
@@ -387,32 +449,32 @@
           {
             "id": "totalTesis",
             "label": "Tesis 2024",
-            "value": 1701,
+            "value": 1731,
             "format": "integer"
           },
           {
             "id": "pregradoPct",
             "label": "Pregrado",
-            "value": 52.3,
+            "value": 52.1,
             "format": "percentage"
           },
           {
             "id": "magisterPct",
             "label": "Magister",
-            "value": 32.7,
+            "value": 33.0,
             "format": "percentage"
           },
           {
             "id": "doctoradoPct",
             "label": "Doctorado",
-            "value": 15.0,
+            "value": 14.9,
             "format": "percentage"
           }
         ],
         "levels": {
-          "pregrado": 890,
-          "magister": 556,
-          "doctorado": 255
+          "pregrado": 901,
+          "magister": 572,
+          "doctorado": 258
         },
         "distributionByInstrument": [
           {
@@ -464,7 +526,7 @@
           {
             "id": "presentaciones",
             "label": "Presentaciones",
-            "value": 6867,
+            "value": 6894,
             "format": "integer"
           },
           {
@@ -489,8 +551,8 @@
         "distributionByInstrument": [
           {
             "instrument": "Ctros. Basales",
-            "nacional": 998,
-            "internacional": 873
+            "nacional": 1005,
+            "internacional": 880
           },
           {
             "instrument": "Inst. Milenio",
@@ -499,28 +561,28 @@
           },
           {
             "instrument": "Nucleos Milenio",
-            "nacional": 623,
-            "internacional": 544
+            "nacional": 636,
+            "internacional": 556
           },
           {
             "instrument": "FONDAP",
-            "nacional": 541,
-            "internacional": 560
+            "nacional": 565,
+            "internacional": 542
           },
           {
             "instrument": "Anillos",
-            "nacional": 411,
-            "internacional": 362
+            "nacional": 457,
+            "internacional": 319
           },
           {
             "instrument": "Ctros. Educacion",
-            "nacional": 100,
-            "internacional": 38
+            "nacional": 101,
+            "internacional": 39
           },
           {
             "instrument": "Ctros. Regionales",
-            "nacional": 41,
-            "internacional": 11
+            "nacional": 26,
+            "internacional": 28
           }
         ]
       },
@@ -529,25 +591,25 @@
           {
             "id": "actividades",
             "label": "Actividades",
+            "value": 4124,
+            "format": "integer"
+          },
+          {
+            "id": "actividadesCentros",
+            "label": "Centros SCIA",
+            "value": 2994,
+            "format": "integer"
+          },
+          {
+            "id": "actividadesMilenio",
+            "label": "Milenio",
             "value": 1130,
             "format": "integer"
           },
           {
-            "id": "participantes",
-            "label": "Participantes",
+            "id": "participantesMilenio",
+            "label": "Participantes Milenio",
             "value": 2359046,
-            "format": "integer"
-          },
-          {
-            "id": "promedioPorCentro",
-            "label": "Promedio por centro",
-            "value": 25,
-            "format": "integer"
-          },
-          {
-            "id": "centrosParticipantes",
-            "label": "Centros participantes",
-            "value": 52,
             "format": "integer"
           }
         ],
@@ -581,15 +643,15 @@
         },
         {
           "title": "Lectura clave · Formacion de capital humano",
-          "body": "Con 1.701 tesis en 2024, el sistema SCIA es el principal formador de investigadores del pais fuera del CONICYT clasico. La piramide es sana: 52,3% pregrado, 32,7% magister y 15% doctorado. Los Centros FONDAP destacan con 16% de doctorados (el mas alto por instrumento), mientras que los Institutos Milenio forman el 17,1%. El 90,1% de la formacion se concentra en solo 4 instrumentos, evidenciando una oportunidad de expansion hacia instrumentos mas pequenos."
+          "body": "Con 1.731 tesis en 2024, el sistema SCIA consolida su rol como uno de los principales formadores de investigadores del pais. La piramide es sana: 52,1% pregrado, 33,0% magister y 14,9% doctorado. Los centros FONDAP destacan con la mayor proporcion de doctorados por instrumento, mientras el programa Milenio (Institutos + Nucleos) aporta 557 tesis, 87 de ellas a nivel doctoral."
         },
         {
           "title": "Lectura clave · Presencia internacional",
-          "body": "Con 6.867 presentaciones en 52 paises, la ciencia SCIA tiene huella global. El dato mas llamativo: los Centros FONDAP lideran la internacionalizacion con 50,8% de sus presentaciones fuera de Chile, superando a todos los demas instrumentos. En contraste, los Centros de Educacion muestran solo 27,5% de proyeccion internacional, coherente con su foco en impacto local. El 44% de internacionalizacion del sistema supera la media latinoamericana estimada."
+          "body": "Con 6.894 presentaciones en 2024 (Centros 3.962, Milenio 2.932), la ciencia SCIA tiene huella global. Los Centros FONDAP lideran la internacionalizacion con 49% de sus presentaciones fuera de Chile. En contraste, los Centros de Educacion muestran 28% de proyeccion internacional, coherente con su foco en impacto local. Los Centros Regionales invierten la tendencia: 52% de sus presentaciones son internacionales pese a ser los de menor volumen."
         },
         {
           "title": "Lectura clave · Divulgacion cientifica",
-          "body": "Con 2.359.046 participantes en 1.130 actividades, el sistema SCIA alcanza un promedio de 2.087 personas por actividad, cifra excepcional para ciencia basica. Los Centros Basales lideran con mediana de 50 asistentes por evento, reflejando actividades presenciales de alta convocatoria. El contraste con Centros de Educacion (mediana 4) revela distintos modelos de vinculacion: masivos vs. especializados. La divulgacion se consolida como puente entre la ciencia SCIA y la ciudadania."
+          "body": "El sistema SCIA realizo 4.124 actividades de divulgacion en 2024 (Centros SCIA 2.994, Milenio 1.130). El programa Milenio reporta 2.359.046 participantes en sus actividades. La cobertura del sistema es amplia: desde conferencias de alto alcance hasta talleres especializados, con presencia en todo el territorio nacional. La divulgacion se consolida como puente sistematico entre la ciencia SCIA y la ciudadania chilena."
         }
       ]
     },
@@ -635,19 +697,71 @@
         }
       ],
       "agePyramid": [
-        { "ageRange": "80+",   "women": 5,   "men": 10  },
-        { "ageRange": "75-79", "women": 2,   "men": 16  },
-        { "ageRange": "70-74", "women": 18,  "men": 37  },
-        { "ageRange": "65-69", "women": 18,  "men": 77  },
-        { "ageRange": "60-64", "women": 43,  "men": 114 },
-        { "ageRange": "55-59", "women": 99,  "men": 176 },
-        { "ageRange": "50-54", "women": 159, "men": 282 },
-        { "ageRange": "45-49", "women": 242, "men": 359 },
-        { "ageRange": "40-44", "women": 247, "men": 375 },
-        { "ageRange": "35-39", "women": 169, "men": 209 },
-        { "ageRange": "30-34", "women": 53,  "men": 64  },
-        { "ageRange": "25-29", "women": 13,  "men": 16  },
-        { "ageRange": "20-24", "women": 2,   "men": 2   }
+        {
+          "ageRange": "80+",
+          "women": 5,
+          "men": 10
+        },
+        {
+          "ageRange": "75-79",
+          "women": 2,
+          "men": 16
+        },
+        {
+          "ageRange": "70-74",
+          "women": 18,
+          "men": 37
+        },
+        {
+          "ageRange": "65-69",
+          "women": 18,
+          "men": 77
+        },
+        {
+          "ageRange": "60-64",
+          "women": 43,
+          "men": 114
+        },
+        {
+          "ageRange": "55-59",
+          "women": 99,
+          "men": 176
+        },
+        {
+          "ageRange": "50-54",
+          "women": 159,
+          "men": 282
+        },
+        {
+          "ageRange": "45-49",
+          "women": 242,
+          "men": 359
+        },
+        {
+          "ageRange": "40-44",
+          "women": 247,
+          "men": 375
+        },
+        {
+          "ageRange": "35-39",
+          "women": 169,
+          "men": 209
+        },
+        {
+          "ageRange": "30-34",
+          "women": 53,
+          "men": 64
+        },
+        {
+          "ageRange": "25-29",
+          "women": 13,
+          "men": 16
+        },
+        {
+          "ageRange": "20-24",
+          "women": 2,
+          "men": 2
+        }
       ],
       "insights": [
         {

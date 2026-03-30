@@ -39,7 +39,7 @@ export function CapitalHumanoSection({ section, formatValue }) {
       legend: {
         labels: {
           color: '#50525f',
-          font: { family: "'Aptos','Segoe UI',sans-serif", size: 11 },
+          font: { family: 'Inter, sans-serif', size: 11 },
           boxWidth: 12, boxHeight: 12, borderRadius: 4, useBorderRadius: true,
         },
       },
@@ -101,7 +101,7 @@ export function CapitalHumanoSection({ section, formatValue }) {
       <article className="panel-card">
         <span className="eyebrow">Pirámide etaria — hombres · mujeres</span>
         <div className="chart-wrap chart-wrap--pyramid">
-          <Bar data={pyramidData} options={pyramidOpts} />
+          <Bar data={pyramidData} options={pyramidOpts} aria-label="Gráfico pirámide etaria: distribución de investigadores por edad y género" role="img" />
         </div>
       </article>
     </div>

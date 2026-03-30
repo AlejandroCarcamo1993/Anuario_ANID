@@ -1,19 +1,33 @@
 node_modules/
 dist/
 
+# IDE / tool dirs
 .agent/
 .agents/
 .claude/
 .kiro/
 .trae/
 .windsurf/
+.playwright-mcp/
 
+# OS
 .DS_Store
 Thumbs.db
 *.log
 
+# Temporal
 coverage/
 tmp/
 temp/
-
 skills-lock.json
+
+# Screenshots de auditoría (solo referencia local, no van al repo)
+screenshots/
+
+# Datos fuente binarios (xlsx, docx, pdf — ver POLITICA_BINARIOS.md)
+datos_2024/**/*.xlsx
+datos_2024/**/*.docx
+datos_2025/**/*.xlsx
+datos_2025/**/*.docx
+*.pdf
+*.zip

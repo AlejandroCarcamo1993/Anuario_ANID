@@ -22,7 +22,7 @@ export const C = {
   sand:       '#eff4ff',
 }
 
-const _font = { family: "'IBM Plex Sans','Segoe UI',sans-serif", size: 11, weight: '500' }
+const _font = { family: "'Inter','Segoe UI',sans-serif", size: 11, weight: '500' }
 
 export const tip = {
   backgroundColor: 'rgba(11,28,48,0.94)',

@@ -102,8 +102,8 @@ export function ProductividadSection({ section, formatValue }) {
               <strong>{formatValue(section.tesis.kpis[0].value, 'integer')}</strong>
             </div>
             <div className="prod-band__item">
-              <small>Participantes div.</small>
-              <strong>{formatValue(section.divulgacion.kpis[1].value, 'integer')}</strong>
+              <small>Actividades div.</small>
+              <strong>{formatValue(section.divulgacion.kpis[0].value, 'integer')}</strong>
             </div>
           </div>
         </article>
@@ -113,7 +113,7 @@ export function ProductividadSection({ section, formatValue }) {
             <span className="eyebrow">Advertencia de datos</span>
             <div className="quality-note quality-note--warn">
               <strong>Congresos: desglose suma {formatValue(totalCongresos, 'integer')}, KPI {formatValue(kpiCongresos, 'integer')}.</strong>
-              <p>Diferencia de 25 presentaciones de "Apoyo Milenio" sin categoría asignable.</p>
+              <p>Revisar distribución por instrumento — el total Excel y el KPI no coinciden.</p>
             </div>
           </article>
         )}
@@ -125,7 +125,7 @@ export function ProductividadSection({ section, formatValue }) {
           <article key={p.program} className="panel-card">
             <span className="eyebrow">{p.program}</span>
             <div className="chart-wrap chart-wrap--donut">
-              <Doughnut data={pubDonutData(p)} options={donutOpts(p.total)} />
+              <Doughnut data={pubDonutData(p)} options={donutOpts(p.total)} aria-label={`Gráfico donut: distribución de publicaciones ${p.program}`} role="img" />
             </div>
             <div className="ratio-grid" style={{ marginTop: '0.75rem' }}>
               <div><small>Total</small><strong>{formatValue(p.total, 'integer')}</strong></div>
@@ -152,7 +152,7 @@ export function ProductividadSection({ section, formatValue }) {
       <article className="panel-card">
         <span className="eyebrow">Formación de capital humano — tesis por instrumento</span>
         <div className="chart-wrap chart-wrap--hbar-lg">
-          <Bar data={tesisData} options={tesisOpts} />
+          <Bar data={tesisData} options={tesisOpts} aria-label="Gráfico de barras horizontal: tesis por instrumento" role="img" />
         </div>
         <div className="ratio-grid" style={{ marginTop: '0.75rem' }}>
           {section.tesis.kpis.map((k) => (
@@ -165,7 +165,7 @@ export function ProductividadSection({ section, formatValue }) {
       <article className="panel-card">
         <span className="eyebrow">Presentaciones a congresos — nacional vs internacional</span>
         <div className="chart-wrap chart-wrap--hbar-lg">
-          <Bar data={congData} options={congOpts} />
+          <Bar data={congData} options={congOpts} aria-label="Gráfico de barras horizontal: presentaciones a congresos nacional vs internacional" role="img" />
         </div>
         <div className="ratio-grid" style={{ marginTop: '0.75rem' }}>
           {section.congresos.kpis.slice(0, 3).map((k) => (

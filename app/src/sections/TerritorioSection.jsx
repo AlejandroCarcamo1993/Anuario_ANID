@@ -194,7 +194,7 @@ export function TerritorioSection({ section, formatValue }) {
       <article className="panel-card">
         <span className="eyebrow">Top 10 regiones por concentración</span>
         <div className="chart-wrap chart-wrap--hbar">
-          <Bar data={barData} options={barOpts} />
+          <Bar data={barData} options={barOpts} aria-label="Gráfico de barras horizontal: top 10 regiones por concentración de iniciativas" role="img" />
         </div>
       </article>
 

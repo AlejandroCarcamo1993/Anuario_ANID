@@ -6,8 +6,10 @@ import { SectionRail } from './components/SectionRail'
 import { MetricStrip } from './components/MetricStrip'
 import { formatValue } from './lib/formatters'
 import { getSectionComponent, getSectionMetrics } from './sectionRegistry'
+import { GenericSection } from './sections/GenericSection'
 
 function SectionContent({ sectionKey, section }) {
+  if (section?._pending) return <GenericSection section={section} />
   const Component = getSectionComponent(sectionKey)
   return <Component sectionKey={sectionKey} section={section} formatValue={formatValue} />
 }
@@ -63,9 +65,9 @@ export default function App() {
         </div>
 
         <div className="app-topbar__tabs" aria-label="Contexto de lectura">
-          <span className="app-topbar__tab is-active">Exploracion Anual</span>
-          <span className="app-topbar__tab">Base React</span>
-          <span className="app-topbar__tab">Contrato JSON</span>
+          <span className="app-topbar__tab is-active">Exploración Anual</span>
+          <span className="app-topbar__tab">Arquitectura React</span>
+          <span className="app-topbar__tab">Esquema de Datos</span>
         </div>
 
         <div className="app-topbar__meta">
@@ -77,7 +79,7 @@ export default function App() {
       <aside className="sidebar">
         <div className="brand-block">
           <span className="brand-block__eyebrow">Archivo Institucional</span>
-          <h1>SCIA Virtual Yearbook</h1>
+          <h1>Anuario Institucional SCIA</h1>
           <p>
             Base visual y estructural para migrar el anuario a una experiencia
             digital moderna, institucional y escalable por ano.
@@ -145,11 +147,11 @@ export default function App() {
 
         <div className="workspace-meta">
           <span className="workspace-meta__item">
-            <small>Organizacion</small>
+            <small>Organización</small>
             <strong>{currentData.footer.organization}</strong>
           </span>
           <span className="workspace-meta__item">
-            <small>Division</small>
+            <small>División</small>
             <strong>{currentData.footer.division}</strong>
           </span>
           <span className="workspace-meta__item">

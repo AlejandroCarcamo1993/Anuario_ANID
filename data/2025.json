@@ -1,0 +1,674 @@
+{
+  "meta": {
+    "year": 2025,
+    "title": "Anuario SCIA 2025",
+    "description": "Datos presupuestarios 2025 del Programa de Caja SCIA.",
+    "generatedAt": "2026-03-27",
+    "generatedFrom": [
+      "Caja 2024 - 2025.xlsx"
+    ],
+    "notes": [
+      "Sección financiera construida desde Caja 2024-2025.xlsx (estados Vigente + Finalizado).",
+      "Otras secciones marcadas como pendientes hasta disponer de fuentes 2025 validadas."
+    ]
+  },
+  "sectionOrder": [
+    "panorama",
+    "postulacion",
+    "financiera",
+    "productividad",
+    "capitalHumano",
+    "diversidad",
+    "territorio",
+    "vinculacion"
+  ],
+  "hero": {
+    "title": "Anuario SCIA 2025",
+    "subtitle": "Estado, vitalidad e impacto del ecosistema de investigación asociativa de Chile",
+    "statPills": [
+      {
+        "label": "Presupuesto",
+        "value": "M$47.183.282"
+      },
+      {
+        "label": "Centros",
+        "value": "M$37.254.969"
+      },
+      {
+        "label": "Proyectos",
+        "value": "M$9.928.313"
+      }
+    ]
+  },
+  "footer": {
+    "organization": "Agencia Nacional de Investigación y Desarrollo",
+    "division": "Subdirección de Centros de Investigación Asociativa",
+    "unit": "Unidad de Vinculación y Extensión (UVE)",
+    "lastDataCut": "2025-03-27",
+    "sources": [
+      "SCIA Programa de Caja 2024-2025"
+    ]
+  },
+  "sections": {
+    "financiera": {
+      "sectionNumber": "03",
+      "navLabel": "Gestión Financiera",
+      "tagLabel": "Ejecución presupuestaria",
+      "title": "Gestión Financiera",
+      "subtitle": "Ejecución presupuestaria 2025 por instrumento y categoría.",
+      "sources": [
+        "SCIA Programa de Caja 2024-2025"
+      ],
+      "kpis": [
+        {
+          "id": "ejecutadoCentros",
+          "label": "Centros 2025",
+          "value": 37254969,
+          "format": "currency_clp_thousands"
+        },
+        {
+          "id": "ejecutadoProyectos",
+          "label": "Proyectos 2025",
+          "value": 9928313,
+          "format": "currency_clp_thousands"
+        },
+        {
+          "id": "totalEjecutado",
+          "label": "Total 2025",
+          "value": 47183282,
+          "format": "currency_clp_thousands"
+        }
+      ],
+      "budgetByInstrument": [
+        {
+          "instrument": "Centros Basales",
+          "amount": 14335147,
+          "category": "centro"
+        },
+        {
+          "instrument": "Inst. Milenio",
+          "amount": 11951680,
+          "category": "centro"
+        },
+        {
+          "instrument": "Ctros. Regionales",
+          "amount": 5938142,
+          "category": "centro"
+        },
+        {
+          "instrument": "Anillos",
+          "amount": 5452500,
+          "category": "proyecto"
+        },
+        {
+          "instrument": "Núcleos Milenio",
+          "amount": 4475813,
+          "category": "proyecto"
+        },
+        {
+          "instrument": "Ctros. Tecnológicos",
+          "amount": 1950000,
+          "category": "centro"
+        },
+        {
+          "instrument": "Ctros. Educación",
+          "amount": 1400000,
+          "category": "centro"
+        },
+        {
+          "instrument": "FONDAP",
+          "amount": 1050000,
+          "category": "centro"
+        },
+        {
+          "instrument": "Ctros. Servicios",
+          "amount": 630000,
+          "category": "centro"
+        }
+      ],
+      "insights": [
+        {
+          "title": "Continuidad presupuestaria 2025",
+          "body": "El presupuesto 2025 alcanza M$47.183.282, equivalente al 49,8% de lo ejecutado en 2024 (M$94.642.834), lo que refleja el ciclo natural de cierre de proyectos. Centros Basales (M$14.335.147) e Institutos Milenio (M$11.951.680) concentran el 70,3% del presupuesto de centros. En proyectos, Anillos (M$5.452.500) y Núcleos Milenio (M$4.475.813) son los únicos instrumentos con vigencia activa en 2025. Ctros. Internacionales, Equip. Mediano y Equip. Mayor no registran pagos en 2025."
+        }
+      ]
+    },
+    "panorama": {
+      "sectionNumber": "01",
+      "navLabel": "Anuario SCIA 2025",
+      "tagLabel": "Panorama 2025",
+      "title": "Panorama 2025",
+      "subtitle": "Estado y distribución del ecosistema de investigación asociativa de Chile al 26 de junio de 2025.",
+      "sources": [
+        "DB Proyectos-Centros SCIA 26-06 versión Completa - 3.0.xlsx"
+      ],
+      "kpis": [
+        {
+          "id": "iniciativas",
+          "label": "Iniciativas",
+          "value": 457,
+          "format": "integer"
+        },
+        {
+          "id": "centros",
+          "label": "Centros",
+          "value": 72,
+          "format": "integer"
+        },
+        {
+          "id": "proyectos",
+          "label": "Proyectos",
+          "value": 385,
+          "format": "integer"
+        },
+        {
+          "id": "presupuesto",
+          "label": "Presupuesto 2025",
+          "value": 47183282,
+          "format": "currency_clp_thousands"
+        }
+      ],
+      "instrumentDistribution": [
+        {
+          "id": "equipamientoMediano",
+          "label": "Equipamiento Mediano",
+          "count": 148,
+          "sharePct": 32.4
+        },
+        {
+          "id": "anillosInvestigacion",
+          "label": "Anillos de Investigación",
+          "count": 109,
+          "sharePct": 23.9
+        },
+        {
+          "id": "nucleosMilenio",
+          "label": "Núcleos Milenio",
+          "count": 60,
+          "sharePct": 13.1
+        },
+        {
+          "id": "otrosInstrumentos",
+          "label": "Otros instrumentos",
+          "count": 140,
+          "sharePct": 30.6
+        }
+      ],
+      "centrosByInstrument": [
+        { "instrument": "Institutos Milenio",      "count": 17 },
+        { "instrument": "Centros Basales",          "count": 17 },
+        { "instrument": "Centros Fondap",           "count": 12 },
+        { "instrument": "Ctros. Regionales",        "count": 10 },
+        { "instrument": "Ctros. Internacionales",   "count": 6  },
+        { "instrument": "Ctros. Tecnológicos",      "count": 5  },
+        { "instrument": "Ctros. de Servicios",      "count": 3  },
+        { "instrument": "Ctros. de Educación",      "count": 2  }
+      ],
+      "regionPresence": {
+        "regionsCount": 14,
+        "regionsCentros": [
+          { "region": "RM",                  "centros": 58 },
+          { "region": "Valparaíso",          "centros": 22 },
+          { "region": "Biobío",              "centros": 17 },
+          { "region": "Los Ríos",            "centros": 16 },
+          { "region": "La Araucanía",        "centros": 13 },
+          { "region": "Antofagasta",         "centros": 12 },
+          { "region": "Magallanes",          "centros": 6  },
+          { "region": "Maule",               "centros": 6  },
+          { "region": "Coquimbo",            "centros": 4  },
+          { "region": "Aysén",               "centros": 3  },
+          { "region": "O'Higgins",           "centros": 2  },
+          { "region": "Arica y Parinacota",  "centros": 1  },
+          { "region": "Tarapacá",            "centros": 1  },
+          { "region": "Los Lagos",           "centros": 1  }
+        ]
+      },
+      "leadershipGender": {
+        "totalDirectores": 76,
+        "mujeres": 20,
+        "hombres": 56,
+        "mujeresPct": 26.3
+      },
+      "disciplineDistribution": [
+        { "discipline": "Ciencias Naturales",       "count": 33, "pct": 43.4 },
+        { "discipline": "Ingeniería y Tecnología",  "count": 15, "pct": 19.7 },
+        { "discipline": "Ciencias Sociales",        "count": 11, "pct": 14.5 },
+        { "discipline": "Multidisciplinario",       "count": 10, "pct": 13.2 },
+        { "discipline": "Ciencias Agrícolas",       "count": 4,  "pct": 5.3  },
+        { "discipline": "Ciencias de la Salud",     "count": 3,  "pct": 3.9  }
+      ],
+      "insights": [
+        {
+          "title": "Lectura clave · Panorama 2025",
+          "body": "Las 457 iniciativas vigentes al 26 de junio de 2025 mantienen la misma escala que 2024, pero con una cartera más concentrada: el presupuesto baja a M$47.183.282 (49,8% de 2024) al reflejar el ciclo natural de cierre de proyectos. Equipamiento Mediano (148), Anillos (109) y Núcleos Milenio (60) vuelven a dominar en número con el 69,4% del total, pero el peso presupuestario se invierte: los 72 centros —solo el 15,7% de las iniciativas— absorben el 78,9% del presupuesto. Catorce regiones del país reportan presencia de centros SCIA; la Región Metropolitana concentra 58 de los 72 (80,6%), seguida por Valparaíso (22) y Biobío (17)."
+        }
+      ]
+    },
+    "postulacion": {
+      "sectionNumber": "02",
+      "navLabel": "Postulación & Adjudicación",
+      "tagLabel": "Concursos 2025",
+      "title": "Postulación & Adjudicación",
+      "subtitle": "Concursos 2025: postulaciones y adjudicaciones.",
+      "sources": [],
+      "kpis": [],
+      "_pending": true,
+      "_pendingNote": "Datos 2025 pendientes de fuente validada."
+    },
+    "productividad": {
+      "sectionNumber": "04",
+      "navLabel": "Productividad Científica",
+      "tagLabel": "Outputs de investigación",
+      "title": "Productividad Científica",
+      "subtitle": "Publicaciones y outputs de los centros SCIA 2025.",
+      "sources": [],
+      "kpis": [],
+      "_pending": true,
+      "_pendingNote": "Datos 2025 pendientes de fuente validada."
+    },
+    "capitalHumano": {
+      "sectionNumber": "05",
+      "navLabel": "Capital Humano",
+      "tagLabel": "Equipo investigador",
+      "title": "Capital Humano",
+      "subtitle": "Composición de los Investigadores Principales reportados en los centros SCIA 2025 por género y tramo etario.",
+      "sources": [
+        "Capital_humano_2024_2025.xlsx"
+      ],
+      "kpis": [
+        {
+          "id": "total",
+          "label": "Inv. Principales",
+          "value": 808,
+          "format": "integer"
+        },
+        {
+          "id": "hombres",
+          "label": "Hombres",
+          "value": 486,
+          "format": "integer"
+        },
+        {
+          "id": "mujeres",
+          "label": "Mujeres",
+          "value": 322,
+          "format": "integer"
+        },
+        {
+          "id": "mujeresPct",
+          "label": "Mujeres",
+          "value": 39.9,
+          "format": "percentage"
+        },
+        {
+          "id": "tramo3554Pct",
+          "label": "Tramo 35-54",
+          "value": 69.6,
+          "format": "percentage"
+        }
+      ],
+      "agePyramid": [
+        {
+          "ageRange": "75-79",
+          "women": 2,
+          "men": 4
+        },
+        {
+          "ageRange": "70-74",
+          "women": 5,
+          "men": 10
+        },
+        {
+          "ageRange": "65-69",
+          "women": 5,
+          "men": 28
+        },
+        {
+          "ageRange": "60-64",
+          "women": 14,
+          "men": 37
+        },
+        {
+          "ageRange": "55-59",
+          "women": 40,
+          "men": 55
+        },
+        {
+          "ageRange": "50-54",
+          "women": 66,
+          "men": 105
+        },
+        {
+          "ageRange": "45-49",
+          "women": 97,
+          "men": 115
+        },
+        {
+          "ageRange": "40-44",
+          "women": 56,
+          "men": 81
+        },
+        {
+          "ageRange": "35-39",
+          "women": 20,
+          "men": 22
+        },
+        {
+          "ageRange": "30-34",
+          "women": 2,
+          "men": 3
+        },
+        {
+          "ageRange": "25-29",
+          "women": 2,
+          "men": 2
+        }
+      ],
+      "insights": [
+        {
+          "title": "Lectura clave · Capital humano 2025",
+          "body": "Los 808 Investigadores Principales reportados al corte de marzo 2026 muestran una mejora en paridad respecto a 2024: 39,9% son mujeres (vs 36,0% en el universo total 2024). El tramo 35-54 concentra el 69,6% del equipo, perfil consistente con investigadores en etapa de alta productividad. Nota metodológica: este universo corresponde solo a Investigadores Principales; la cobertura del equipo completo será reportada cuando el ciclo 2025 esté cerrado."
+        }
+      ]
+    },
+    "diversidad": {
+      "sectionNumber": "06",
+      "navLabel": "Diversidad & Equidad",
+      "tagLabel": "Paridad e inclusión",
+      "title": "Diversidad & Equidad",
+      "subtitle": "Indicadores de género y equidad 2025 en el universo de Investigadores Principales.",
+      "sources": [
+        "Capital_humano_2024_2025.xlsx"
+      ],
+      "kpis": [
+        {
+          "id": "total",
+          "label": "Inv. Principales",
+          "value": 808,
+          "format": "integer"
+        },
+        {
+          "id": "mujeresPct",
+          "label": "Participación femenina",
+          "value": 39.9,
+          "format": "percentage"
+        },
+        {
+          "id": "razonHM",
+          "label": "Razón H/M",
+          "value": 1.51,
+          "format": "decimal"
+        }
+      ],
+      "femaleParticipationByInstrument": [
+        { "instrument": "Núcleos Milenio",      "valuePct": 46.0 },
+        { "instrument": "Anillos",              "valuePct": 43.2 },
+        { "instrument": "Ctros. Regionales",    "valuePct": 41.9 },
+        { "instrument": "Inst. Milenio",        "valuePct": 36.4 },
+        { "instrument": "Ctros. Internacionales","valuePct": 34.4 },
+        { "instrument": "Ctros. Basales",       "valuePct": 34.3 },
+        { "instrument": "Equip. Mayor",         "valuePct": 33.3 },
+        { "instrument": "Ctros. Educación",     "valuePct": 30.8 },
+        { "instrument": "FONDAP",               "valuePct": 29.5 }
+      ],
+      "leadership": {
+        "razonHM": 1.51,
+        "directivoFemeninoPct": 39.9,
+        "liderazgoInvestigadorasPct": 39.9,
+        "liderazgoJovenesPct": 47.1
+      },
+      "insights": [
+        {
+          "title": "Lectura clave · Diversidad & Equidad 2025",
+          "body": "Con 39,9% de participación femenina entre los 808 Investigadores Principales, el ecosistema SCIA mejora respecto al promedio 2024 (36,0%). Núcleos Milenio (46,0%) y Anillos (43,2%) lideran la paridad, mientras FONDAP (29,5%) y Ctros. Educación (30,8%) presentan la mayor brecha. La razón H/M es 1,51 en el total, pero el tramo 35-39 muestra señales positivas: 47,1% de participación femenina, lo que augura una trayectoria de paridad en la próxima generación de investigadores."
+        }
+      ]
+    },
+    "territorio": {
+      "sectionNumber": "07",
+      "navLabel": "Cobertura Territorial",
+      "tagLabel": "Distribución geográfica",
+      "title": "Cobertura Territorial",
+      "subtitle": "Distribución geográfica de las iniciativas SCIA 2025.",
+      "sources": [],
+      "kpis": [],
+      "_pending": true,
+      "_pendingNote": "Datos 2025 pendientes de fuente validada."
+    },
+    "vinculacion": {
+      "sectionNumber": "08",
+      "navLabel": "Vinculación & Ciencia con Impacto",
+      "tagLabel": "Impacto y transferencia",
+      "title": "Vinculación & Ciencia con Impacto",
+      "subtitle": "Agenda 2025 de la Unidad de Vinculación y Extensión en tres dimensiones complementarias.",
+      "sources": [
+        "Consolidado_Actividades_UVE_2025 (3).xlsx"
+      ],
+      "kpis": [
+        {
+          "id": "actividadesUve",
+          "label": "Actividades UVE",
+          "value": 22,
+          "format": "integer"
+        },
+        {
+          "id": "dimensiones",
+          "label": "Dimensiones",
+          "value": 3,
+          "format": "integer"
+        },
+        {
+          "id": "eventosSectorProductivo",
+          "label": "Eventos sector productivo",
+          "value": 6,
+          "format": "integer"
+        }
+      ],
+      "summary": {
+        "title": "22 actividades, 3 dimensiones, cobertura nacional e internacional: la agenda UVE 2025.",
+        "lead": "La Unidad de Vinculación y Extensión desplegó 22 actividades en tres frentes complementarios: 4 de visibilización científica, 6 de fortalecimiento de la red interna SCIA y 12 de vinculación con actores externos. El año estuvo marcado por dos hitos de escala inédita: INNOVAPOLINAV 2025 —donde ANID fue patrocinadora oficial con 17 stands de centros y proyectos— y el Concurso Piloto de Pasantías ANID-BCN, primer instrumento formal de movilidad investigadora entre ANID y la Biblioteca del Congreso Nacional."
+      },
+      "sourceNote": "Fuente UVE: síntesis estructurada a partir de Consolidado_Actividades_UVE_2025 (3).xlsx. Las 30 filas originales consolidan aportes de distintos miembros del equipo UVE para los mismos eventos; tras deduplicación se identificaron 22 actividades únicas.",
+      "dimensions": [
+        {
+          "id": "visibility",
+          "colorLabel": "Verde",
+          "title": "Visibilizar el quehacer científico SCIA",
+          "description": "Posicionar la investigación de los centros en espacios de alta visibilidad pública, acercando la ciencia a la ciudadanía, la industria y los medios.",
+          "count": 4,
+          "timeframe": "Enero · Diciembre",
+          "badge": "Ciudadanía",
+          "activities": [
+            {
+              "date": "16 de enero",
+              "place": "Sala 2, CEINA · Santiago",
+              "title": "Congreso Futuro 2025 — Colonización del Espacio",
+              "actors": "Fundación Encuentros del Futuro · AC3E · CATA · I-Bio · COES.",
+              "objective": "Conversatorio con investigadores de cuatro centros SCIA sobre exploración espacial y ciencia de frontera ante audiencia masiva."
+            },
+            {
+              "date": "31 de julio",
+              "place": "Biblioteca de Santiago",
+              "title": "Invierno Conciencia",
+              "actors": "UVE · ANID · Público general.",
+              "objective": "Acercar la producción científica de los centros SCIA a audiencias no especializadas en el marco de la programación cultural invernal."
+            },
+            {
+              "date": "25 de septiembre",
+              "place": "ANID · Santiago",
+              "title": "Conversatorio Divulgación Científica",
+              "actors": "UVE · Comunidad científica SCIA.",
+              "objective": "Reflexión colectiva sobre prácticas y desafíos de la divulgación científica en el ecosistema de centros asociativos."
+            },
+            {
+              "date": "Todo el año 2025",
+              "place": "ANID · Santiago",
+              "title": "Anuario SCIA 2024 / 2025",
+              "actors": "Equipo UVE · SCIA · Público externo.",
+              "objective": "Elaboración del anuario virtual institucional como herramienta de rendición de cuentas y posicionamiento del ecosistema SCIA."
+            }
+          ]
+        },
+        {
+          "id": "associativity",
+          "colorLabel": "Rosa",
+          "title": "Fortalecer la red interna SCIA",
+          "description": "Generar espacios de encuentro, intercambio de buenas prácticas y gobernanza compartida entre los distintos instrumentos y actores de la red SCIA.",
+          "count": 6,
+          "timeframe": "Mayo · Diciembre",
+          "badge": "Red SCIA",
+          "activities": [
+            {
+              "date": "6 de mayo",
+              "place": "Palacio Pereira · Santiago",
+              "title": "Reunión Anual Encargados de Comunicaciones",
+              "actors": "UVE · Encargados de comunicaciones de Centros y Proyectos SCIA.",
+              "objective": "Revisión del quehacer comunicacional 2024 y planificación colaborativa 2025, con énfasis en impulsar la asociatividad entre instrumentos."
+            },
+            {
+              "date": "8 de octubre",
+              "place": "Antofagasta",
+              "title": "Reunión Asociativa Anillos Litio y Salares",
+              "actors": "UVE · Investigadores de Anillos Temáticos Litio y Salares.",
+              "objective": "Fomentar vinculación entre proyectos Anillos de temática afín, compartir experiencias y buenas prácticas de investigación colaborativa."
+            },
+            {
+              "date": "14 de octubre",
+              "place": "Salón INAPI · Santiago",
+              "title": "Reunión Directores Ejecutivos de Centros",
+              "actors": "UVE · Directores Ejecutivos de Centros ANID.",
+              "objective": "Espacio de vinculación y gestión entre directivos, revisión del quehacer SCIA-ANID y mesa de trabajo con síntesis digital."
+            },
+            {
+              "date": "Octubre — Noviembre",
+              "place": "Sistema de Postulación en Línea",
+              "title": "Concurso Piloto Pasantías ANID-BCN",
+              "actors": "UVE · Biblioteca del Congreso Nacional · Investigadores SCIA.",
+              "objective": "Primer concurso piloto de pasantías para investigadores de posgrado y posdoctorado de centros SCIA en la Biblioteca del Congreso Nacional."
+            },
+            {
+              "date": "26 de noviembre",
+              "place": "Piso 2 ANID · Santiago",
+              "title": "Conversatorio Propiedad Intelectual",
+              "actors": "UVE · INAPI · Centros Ciencia & Vida, CREAS, AMTC, Saphir.",
+              "objective": "Diálogo sobre gestión y estrategia de propiedad intelectual en centros asociativos; exposiciones de cuatro centros ANID con moderación UVE."
+            },
+            {
+              "date": "18 de diciembre",
+              "place": "Centro La Reina · Santiago",
+              "title": "Jóvenes ConCiencia 2025",
+              "actors": "UVE · Investigadores jóvenes de Centros ANID.",
+              "objective": "Encuentro de vinculación orientado a la nueva generación de investigadores SCIA, con abordaje de temática convocante y fomento del relevo científico."
+            }
+          ]
+        },
+        {
+          "id": "ecosystem",
+          "colorLabel": "Turquesa",
+          "title": "Vincular SCIA con actores del ecosistema",
+          "description": "Articular la ciencia asociativa con el sector productivo, el gobierno, la sociedad civil y organismos internacionales, abriendo puentes de impacto real.",
+          "count": 12,
+          "timeframe": "Enero · Diciembre",
+          "badge": "Ecosistema",
+          "activities": [
+            {
+              "date": "24 de abril",
+              "place": "Espacio Riesco · Santiago",
+              "title": "Expomin 2025",
+              "actors": "SCIA · SIA · Centro AMTC · Industria minera.",
+              "objective": "Presentación conjunta SCIA y SIA sobre el impacto de los instrumentos ANID en el sector minero ante audiencia de la cuádruple hélice."
+            },
+            {
+              "date": "2 — 4 de junio",
+              "place": "Hotel Dreams · Temuco",
+              "title": "ENAPROD 2025",
+              "actors": "UVE · 6 Centros/Proyectos ANID (LEITAT, CENAMAD, CIPA, FITYRE, Ecomezclas, EVIIS) · CDT-CCHC.",
+              "objective": "Stand conjunto en el encuentro nacional de productividad de la construcción, con presencia del Subdirector SIA."
+            },
+            {
+              "date": "27 de agosto",
+              "place": "Instituto Teletón · Santiago",
+              "title": "Teletón — Ciencia y Salud",
+              "actors": "UVE · Instituto Teletón · Investigadores de centros vinculados a innovación en salud.",
+              "objective": "Presentación de desafíos de la Teletón para identificar potenciales colaboraciones con centros ANID en investigación aplicada a salud."
+            },
+            {
+              "date": "1 — 2 de octubre",
+              "place": "Edificio CCHC · Las Condes",
+              "title": "ENAMA 2025",
+              "actors": "UVE · 5 Centros ANID (LEITAT, CENAMAD, CIPA, CIPYCS, CAPES) · CDT-CCHC · Subdirectora Nicole Ehrenfeld.",
+              "objective": "Stand conjunto y charla TED en el encuentro nacional de arquitectura y medioambiente, con énfasis en sostenibilidad e investigación aplicada."
+            },
+            {
+              "date": "22 de octubre",
+              "place": "CCHC Valparaíso · Viña del Mar",
+              "title": "INTECVAL 2025",
+              "actors": "UVE · Subdirector Carlos Ladrix · Universidades y profesionales de la construcción.",
+              "objective": "Charla sobre el rol e impacto de ANID en innovación para la construcción ante audiencia académica y profesional regional."
+            },
+            {
+              "date": "23 — 24 de octubre",
+              "place": "Academia Politécnica Naval · Viña del Mar",
+              "title": "INNOVAPOLINAV 2025",
+              "actors": "ANID (patrocinadora oficial) · 10 Centros + 7 Proyectos ANID · Directora Nacional.",
+              "objective": "Mayor despliegue ANID del año: 17 stands con centros y proyectos ante cuádruple hélice del mundo naval, con cierre presidido por la Directora Nacional."
+            },
+            {
+              "date": "2025",
+              "place": "ANID · Santiago",
+              "title": "Match up / INdusMatchUp",
+              "actors": "UVE · Centros SCIA · Sector productivo.",
+              "objective": "Gestión de vinculación entre investigadores de centros y empresas del sector productivo mediante encuentros de matchmaking."
+            },
+            {
+              "date": "2025",
+              "place": "Punta Arenas",
+              "title": "Conversatorio FONDEQUIP · Punta Arenas",
+              "actors": "UVE · Comunidad científica regional.",
+              "objective": "Difusión de experiencias en adquisición y uso de equipamiento FONDEQUIP en la región de Magallanes."
+            },
+            {
+              "date": "2025",
+              "place": "ANID / Online",
+              "title": "Gestiones Unidad de Internacionalización",
+              "actors": "UVE · APEC · Comunidad científica internacional.",
+              "objective": "Simposio APEC, webinars internacionales y gestiones de vinculación con redes científicas globales."
+            },
+            {
+              "date": "2025",
+              "place": "MinCiencia · Santiago",
+              "title": "FECI — Vinculación MinCiencia",
+              "actors": "UVE · Ministerio de Ciencia · Centros y Proyectos SCIA.",
+              "objective": "Articulación entre MinCiencia y el ecosistema de centros asociativos ANID en el marco del Fondo de Equipamiento Científico e Infraestructura."
+            },
+            {
+              "date": "2025",
+              "place": "ANID · Santiago",
+              "title": "Emprende Tu Mente",
+              "actors": "UVE · Emprendedores · Centros SCIA.",
+              "objective": "Gestión de vinculación entre emprendedores y centros de investigación SCIA para fomentar la transferencia tecnológica."
+            },
+            {
+              "date": "2025",
+              "place": "Santiago",
+              "title": "Food & Services",
+              "actors": "UVE · Industria de alimentos · Centros SCIA.",
+              "objective": "Presencia y gestión SCIA en feria sectorial de la industria alimentaria para vincular oferta científica con demanda productiva."
+            }
+          ]
+        }
+      ],
+      "insights": [
+        {
+          "title": "Lectura clave · Vinculación con el entorno 2025",
+          "body": "En 2025, la UVE articuló 22 actividades en 3 dimensiones: 4 de visibilización, 6 de asociatividad y 12 de vinculación con actores del ecosistema. El marcado peso del frente externo (55% de las actividades) refleja una agenda deliberadamente orientada a abrir puentes con la industria, el sector social y organismos internacionales. INNOVAPOLINAV concentró el mayor despliegue institucional del año con 17 stands y la presencia de la Directora Nacional; el Concurso Piloto de Pasantías ANID-BCN abrió un canal inédito de movilidad para investigadores de centros y proyectos SCIA."
+        }
+      ],
+      "scientificHighlights": {
+        "selectedCount": 0,
+        "items": [],
+        "_pendingNote": "Hallazgos científicos destacados 2025 pendientes de fuente validada."
+      }
+    }
+  }
+}

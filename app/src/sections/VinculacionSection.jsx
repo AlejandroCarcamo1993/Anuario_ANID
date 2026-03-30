@@ -1,3 +1,5 @@
+import { ParticleCard } from '../components/MagicBento/MagicBento'
+
 export function VinculacionSection({ section, formatValue }) {
   const totalDimensions = section.dimensions.length
   const totalActivities = section.dimensions.reduce((acc, item) => acc + item.activities.length, 0)
@@ -41,7 +43,14 @@ export function VinculacionSection({ section, formatValue }) {
 
       <div className="uve-dimension-grid">
         {section.dimensions.map((dimension) => (
-          <article key={dimension.id} className={`dimension-card dimension-card--${dimension.id}`}>
+          <ParticleCard
+            key={dimension.id}
+            className={`dimension-card dimension-card--${dimension.id}`}
+            glowColor="52, 79, 159"
+            enableTilt={false}
+            clickEffect={true}
+            enableMagnetism={true}
+          >
             <span className="eyebrow">{dimension.colorLabel}</span>
             <h4>{dimension.title}</h4>
             <p>{dimension.description}</p>
@@ -49,7 +58,7 @@ export function VinculacionSection({ section, formatValue }) {
               <span className="pill-soft">{dimension.badge}</span>
               <span className="pill-accent">{dimension.timeframe}</span>
             </div>
-          </article>
+          </ParticleCard>
         ))}
       </div>
 
@@ -57,7 +66,7 @@ export function VinculacionSection({ section, formatValue }) {
         <span className="eyebrow">Agenda 2024</span>
         <div className="agenda-grid">
           {section.dimensions.map((dimension) => (
-            <section key={dimension.id} className="agenda-track">
+            <section key={dimension.id} className={`agenda-track agenda-track--${dimension.id}`}>
               <header className="agenda-track__header">
                 <div>
                   <small>{dimension.colorLabel}</small>
@@ -85,7 +94,7 @@ export function VinculacionSection({ section, formatValue }) {
       </article>
 
       <article className="panel-card highlight-wall">
-        <span className="eyebrow">Hallazgos cientificos destacados</span>
+        <span className="eyebrow">Hallazgos científicos destacados</span>
         <div className="mini-grid">
           {section.scientificHighlights.items.map((item) => (
             <article key={item.title} className="highlight-card">

@@ -59,7 +59,7 @@ export function PanoramaSection({ section, formatValue }) {
         <article className="panel-card panorama-donut-card">
           <span className="eyebrow">Distribución por instrumento</span>
           <div className="chart-wrap chart-wrap--donut">
-            <Doughnut data={donutData} options={donutOptions} />
+            <Doughnut data={donutData} options={donutOptions} aria-label="Gráfico donut: distribución por instrumento" role="img" />
           </div>
         </article>
       </div>

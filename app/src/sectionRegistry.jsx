@@ -73,7 +73,12 @@ export function getSectionComponent(sectionKey) {
 }
 
 export function getSectionMetrics(sectionKey, section) {
-  return registry[sectionKey]?.getMetrics?.(section) ?? []
+  if (section?._pending) return []
+  try {
+    return registry[sectionKey]?.getMetrics?.(section) ?? []
+  } catch {
+    return []
+  }
 }
 
 export function getRegisteredSectionKeys() {

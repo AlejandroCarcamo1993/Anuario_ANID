@@ -81,7 +81,7 @@ export function DiversidadSection({ section, formatValue }) {
       <article className="panel-card">
         <span className="eyebrow">Participación femenina por instrumento</span>
         <div className="chart-wrap chart-wrap--hbar">
-          <Bar data={barData} options={barOpts} />
+          <Bar data={barData} options={barOpts} aria-label="Gráfico de barras horizontal: participación femenina por instrumento" role="img" />
         </div>
       </article>
     </div>
