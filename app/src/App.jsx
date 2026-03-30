@@ -81,8 +81,8 @@ export default function App() {
           <span className="brand-block__eyebrow">Archivo Institucional</span>
           <h1>Anuario Institucional SCIA</h1>
           <p>
-            Base visual y estructural para migrar el anuario a una experiencia
-            digital moderna, institucional y escalable por ano.
+            Plataforma interactiva de datos científicos institucionales de Chile.
+            Productividad, financiamiento e impacto del ecosistema SCIA año a año.
           </p>
         </div>
 
@@ -105,10 +105,10 @@ export default function App() {
         </div>
 
         <div className="sidebar-note">
-          <span className="eyebrow">Modelo base</span>
+          <span className="eyebrow">Acerca del anuario</span>
           <p>
-            Esta capa toma como referencia el lenguaje visual del paquete
-            <code> stitch</code> y lo adapta a una lectura mas institucional para ANID.
+            Datos actualizados al corte {currentData.footer.lastDataCut}.
+            Fuentes: bases de proyectos, investigadores y ejecución presupuestaria SCIA.
           </p>
         </div>
 
@@ -186,9 +186,9 @@ export default function App() {
 
             <SectionContent sectionKey={activeSection} section={activeData} />
 
-            {activeData.insights?.length > 0 && (
+            {activeData.insights?.length > 1 && (
               <section className="insight-stack">
-                {activeData.insights.map((item) => (
+                {activeData.insights.slice(1).map((item) => (
                   <article key={item.title} className="insight-card">
                     <span className="eyebrow">{item.title}</span>
                     <p>{item.body}</p>

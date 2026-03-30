@@ -2,6 +2,7 @@ import { Doughnut } from 'react-chartjs-2'
 import { C, tip, leg } from '../lib/chartConfig'
 
 const COLORS = [C.teal, C.copper, C.rose, '#4a5cc7']
+const INST_COLORS = ['#344F9F', '#293055', '#00566c', '#E75D50', '#4a5cc7', '#00869a', '#b36200', '#7c3aed']
 
 export function PanoramaSection({ section, formatValue }) {
   const topThreeShare = section.instrumentDistribution.slice(0, 3)
@@ -33,8 +34,13 @@ export function PanoramaSection({ section, formatValue }) {
     },
   }
 
+  const maxCentros = section.centrosByInstrument
+    ? Math.max(...section.centrosByInstrument.map((i) => i.count))
+    : 0
+
   return (
     <div className="panorama-shell">
+      {/* Hero: editorial + donut */}
       <div className="panorama-grid">
         <article className="lead-card panorama-hero">
           <span className="eyebrow">Lectura editorial</span>
@@ -46,11 +52,7 @@ export function PanoramaSection({ section, formatValue }) {
               <strong>{formatValue(topThreeShare, 'percentage')}</strong>
             </div>
             <div className="panorama-ribbon__item">
-              <small>Total iniciativas</small>
-              <strong>{formatValue(section.instrumentDistribution.reduce((a, i) => a + i.count, 0), 'integer')}</strong>
-            </div>
-            <div className="panorama-ribbon__item">
-              <small>Instrumentos</small>
+              <small>Instrumentos distintos</small>
               <strong>{section.instrumentDistribution.length}</strong>
             </div>
           </div>
@@ -64,14 +66,84 @@ export function PanoramaSection({ section, formatValue }) {
         </article>
       </div>
 
-      <div className="panorama-stat-grid">
-        {section.kpis.map((item) => (
-          <article key={item.id} className="panorama-stat-card">
-            <small>{item.label}</small>
-            <strong>{formatValue(item.value, item.format)}</strong>
-          </article>
-        ))}
-      </div>
+      {/* Centros por instrumento + Disciplinas — sólo años con datos ricos */}
+      {(section.centrosByInstrument || section.disciplineDistribution) && (
+        <div className="panorama-bottom-grid">
+
+          {section.centrosByInstrument && (
+            <article className="panel-card panorama-inst-card">
+              <span className="eyebrow">Centros por instrumento</span>
+              <p className="panorama-inst-card__sub">
+                {section.centrosByInstrument.reduce((a, i) => a + i.count, 0)} centros en {section.centrosByInstrument.length} instrumentos
+              </p>
+              <div className="inst-bar-list">
+                {section.centrosByInstrument.map((item, i) => (
+                  <div key={item.instrument} className="inst-bar">
+                    <div className="inst-bar__header">
+                      <span>{item.instrument}</span>
+                      <strong style={{ color: INST_COLORS[i % INST_COLORS.length] }}>{item.count}</strong>
+                    </div>
+                    <div className="inst-bar__track">
+                      <div
+                        className="inst-bar__fill"
+                        style={{
+                          width: `${(item.count / maxCentros) * 100}%`,
+                          background: `linear-gradient(90deg, ${INST_COLORS[i % INST_COLORS.length]}, ${INST_COLORS[i % INST_COLORS.length]}bb)`,
+                        }}
+                      />
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </article>
+          )}
+
+          {section.disciplineDistribution && (
+            <article className="panel-card panorama-disc-card">
+              <span className="eyebrow">Distribución disciplinar</span>
+              <p className="panorama-disc-card__sub">Por área OCDE — centros SCIA</p>
+              <div className="disc-list">
+                {section.disciplineDistribution.map((item, i) => (
+                  <div key={item.discipline} className="disc-row">
+                    <div className="disc-row__top">
+                      <span>{item.discipline}</span>
+                      <strong>{formatValue(item.pct, 'percentage')}</strong>
+                    </div>
+                    <div className="disc-row__track">
+                      <div
+                        className="disc-row__fill"
+                        style={{
+                          width: `${item.pct}%`,
+                          background: `linear-gradient(90deg, ${INST_COLORS[i % INST_COLORS.length]}, ${INST_COLORS[(i + 2) % INST_COLORS.length]}90)`,
+                        }}
+                      />
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {section.leadershipGender && (
+                <div className="gender-strip">
+                  <div className="gender-strip__item gender-strip__item--female">
+                    <small>Liderazgo femenino</small>
+                    <strong>
+                      {formatValue(
+                        section.leadershipGender.femalePct ?? section.leadershipGender.directivoFemeninoPct,
+                        'percentage'
+                      )}
+                    </strong>
+                  </div>
+                  <div className="gender-strip__item">
+                    <small>Razón H/M directivos</small>
+                    <strong>{section.leadershipGender.razonHM ?? '—'}</strong>
+                  </div>
+                </div>
+              )}
+            </article>
+          )}
+
+        </div>
+      )}
     </div>
   )
 }

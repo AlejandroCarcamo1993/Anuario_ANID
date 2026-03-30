@@ -1,8 +1,67 @@
+import { useState } from 'react'
 import { ParticleCard } from '../components/MagicBento/MagicBento'
+
+const ChevronIcon = () => (
+  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+    <path d="M3 5l4 4 4-4" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
+  </svg>
+)
+
+function AgendaAccordion({ dimension }) {
+  const [openIndex, setOpenIndex] = useState(null)
+  const toggle = (i) => setOpenIndex(openIndex === i ? null : i)
+
+  return (
+    <section className={`agenda-track agenda-track--${dimension.id}`}>
+      <header className="agenda-track__header">
+        <div>
+          <small>{dimension.colorLabel}</small>
+          <h4>{dimension.title}</h4>
+        </div>
+        <span className="pill-soft">{dimension.count}</span>
+      </header>
+
+      <div className="agenda-accordion">
+        {dimension.activities.map((activity, i) => {
+          const isOpen = openIndex === i
+          return (
+            <div key={activity.title} className={`accord-item${isOpen ? ' accord-item--open' : ''}`}>
+              <button
+                type="button"
+                className="accord-trigger"
+                onClick={() => toggle(i)}
+                aria-expanded={isOpen}
+              >
+                <span className={`accord-trigger__badge accord-trigger__badge--${dimension.id}`}>
+                  {activity.date}
+                </span>
+                <span className="accord-trigger__title">{activity.title}</span>
+                <span className="accord-trigger__chevron">
+                  <ChevronIcon />
+                </span>
+              </button>
+
+              <div className="accord-body-wrap">
+                <div className="accord-body">
+                  <p className="accord-body__objective">{activity.objective}</p>
+                  <div className="accord-body__meta">
+                    <span className="accord-body__place">{activity.place}</span>
+                    <span className="accord-body__actors">{activity.actors}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )
+        })}
+      </div>
+    </section>
+  )
+}
 
 export function VinculacionSection({ section, formatValue }) {
   const totalDimensions = section.dimensions.length
   const totalActivities = section.dimensions.reduce((acc, item) => acc + item.activities.length, 0)
+  const agendaYear = section.agendaYear ?? '—'
 
   return (
     <div className="uve-shell">
@@ -63,32 +122,10 @@ export function VinculacionSection({ section, formatValue }) {
       </div>
 
       <article className="panel-card agenda-card">
-        <span className="eyebrow">Agenda 2024</span>
+        <span className="eyebrow">Agenda {agendaYear}</span>
         <div className="agenda-grid">
           {section.dimensions.map((dimension) => (
-            <section key={dimension.id} className={`agenda-track agenda-track--${dimension.id}`}>
-              <header className="agenda-track__header">
-                <div>
-                  <small>{dimension.colorLabel}</small>
-                  <h4>{dimension.title}</h4>
-                </div>
-                <span className="pill-soft">{dimension.count}</span>
-              </header>
-
-              <div className="agenda-track__items">
-                {dimension.activities.map((activity) => (
-                  <article key={activity.title} className="activity-card">
-                    <div className="activity-card__meta">
-                      <span>{activity.date}</span>
-                      <span>{activity.place}</span>
-                    </div>
-                    <strong>{activity.title}</strong>
-                    <p>{activity.objective}</p>
-                    <small>{activity.actors}</small>
-                  </article>
-                ))}
-              </div>
-            </section>
+            <AgendaAccordion key={dimension.id} dimension={dimension} />
           ))}
         </div>
       </article>

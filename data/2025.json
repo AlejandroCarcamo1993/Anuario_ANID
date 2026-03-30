@@ -440,6 +440,7 @@
       "navLabel": "Vinculación & Ciencia con Impacto",
       "tagLabel": "Impacto y transferencia",
       "title": "Vinculación & Ciencia con Impacto",
+      "agendaYear": 2025,
       "subtitle": "Agenda 2025 de la Unidad de Vinculación y Extensión en tres dimensiones complementarias.",
       "sources": [
         "Consolidado_Actividades_UVE_2025 (3).xlsx"
@@ -473,7 +474,7 @@
         {
           "id": "visibility",
           "colorLabel": "Verde",
-          "title": "Visibilizar el quehacer científico SCIA",
+          "title": "Visibilizar el quehacer de proyectos SCIA",
           "description": "Posicionar la investigación de los centros en espacios de alta visibilidad pública, acercando la ciencia a la ciudadanía, la industria y los medios.",
           "count": 4,
           "timeframe": "Enero · Diciembre",
@@ -512,7 +513,7 @@
         {
           "id": "associativity",
           "colorLabel": "Rosa",
-          "title": "Fortalecer la red interna SCIA",
+          "title": "Asociatividad Centros y proyectos ANID",
           "description": "Generar espacios de encuentro, intercambio de buenas prácticas y gobernanza compartida entre los distintos instrumentos y actores de la red SCIA.",
           "count": 6,
           "timeframe": "Mayo · Diciembre",
@@ -565,7 +566,7 @@
         {
           "id": "ecosystem",
           "colorLabel": "Turquesa",
-          "title": "Vincular SCIA con actores del ecosistema",
+          "title": "Vinculación otros actores ecosistema",
           "description": "Articular la ciencia asociativa con el sector productivo, el gobierno, la sociedad civil y organismos internacionales, abriendo puentes de impacto real.",
           "count": 12,
           "timeframe": "Enero · Diciembre",

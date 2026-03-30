@@ -69,11 +69,60 @@ export function DiversidadSection({ section, formatValue }) {
 
         <article className="panel-card diversity-sidecard">
           <span className="eyebrow">Indicadores de liderazgo</span>
-          <div className="ratio-grid">
-            <div><small>Razón H/M</small><strong>{section.leadership.razonHM.toFixed(2)}</strong></div>
-            <div><small>Directivo</small><strong>{formatValue(section.leadership.directivoFemeninoPct, 'percentage')}</strong></div>
-            <div><small>Investigación</small><strong>{formatValue(section.leadership.liderazgoInvestigadorasPct, 'percentage')}</strong></div>
-            <div><small>Jóvenes</small><strong>{formatValue(section.leadership.liderazgoJovenesPct, 'percentage')}</strong></div>
+
+          <div className="diversity-total-row">
+            <span className="diversity-total-row__num">
+              {section.kpis.find((k) => k.id === 'total')?.value ?? '—'}
+            </span>
+            <span className="diversity-total-row__label">Investigadoras e investigadores principales</span>
+          </div>
+
+          <div className="leader-stat-list">
+            {[
+              {
+                label: 'Paridad global',
+                note: 'Razón H/M · 1.0 = paridad',
+                display: section.leadership.razonHM.toFixed(2),
+                pct: Math.round((1 / (1 + section.leadership.razonHM)) * 100),
+                color: '#344F9F',
+              },
+              {
+                label: 'Liderazgo directivo',
+                note: 'Cargos de dirección femeninos',
+                display: formatValue(section.leadership.directivoFemeninoPct, 'percentage'),
+                pct: section.leadership.directivoFemeninoPct,
+                color: '#E75D50',
+              },
+              {
+                label: 'Investigadoras',
+                note: 'Participación en investigación',
+                display: formatValue(section.leadership.liderazgoInvestigadorasPct, 'percentage'),
+                pct: section.leadership.liderazgoInvestigadorasPct,
+                color: '#00566c',
+              },
+              {
+                label: 'Jóvenes científicas',
+                note: 'Liderazgo en tramos menores de 35',
+                display: formatValue(section.leadership.liderazgoJovenesPct, 'percentage'),
+                pct: section.leadership.liderazgoJovenesPct,
+                color: '#7c3aed',
+              },
+            ].map((stat) => (
+              <div key={stat.label} className="leader-stat">
+                <div className="leader-stat__header">
+                  <span className="leader-stat__label">{stat.label}</span>
+                  <strong className="leader-stat__value" style={{ color: stat.color }}>{stat.display}</strong>
+                </div>
+                <div className="leader-stat__track">
+                  <div
+                    className="leader-stat__fill"
+                    style={{ width: `${Math.min(100, stat.pct)}%`, background: stat.color }}
+                  />
+                  <div className="leader-stat__parity" />
+                </div>
+                <small className="leader-stat__note">{stat.note}</small>
+              </div>
+            ))}
           </div>
         </article>
       </div>

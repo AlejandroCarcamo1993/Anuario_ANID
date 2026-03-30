@@ -182,11 +182,11 @@ export function TerritorioSection({ section, formatValue }) {
 
       </article>
 
-      {/* ── Advertencia de datos ─────────────────────────────── */}
+      {/* ── Nota de metodología ──────────────────────────────── */}
       {mismatch && (
-        <article className="quality-note quality-note--warn">
-          <strong>Detalle regional suma {formatValue(sumRegions, 'integer')}, KPI dice {formatValue(total, 'integer')}.</strong>
-          <p>19 iniciativas tienen presencia multi-regional y se cuentan una sola vez en el KPI.</p>
+        <article className="quality-note quality-note--info">
+          <strong>Nota metodológica</strong>
+          <p>{formatValue(total - sumRegions, 'integer')} iniciativas con presencia multi-regional se contabilizan una sola vez en el total.</p>
         </article>
       )}
 
