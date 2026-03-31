@@ -142,6 +142,41 @@ export function FinancieraSection({ section, formatValue }) {
         </article>
       )}
 
+      {/* ── Editorial bridge (solo en modo comparativo) ── */}
+      {hasComparison && items2.length > 0 && (() => {
+        const delta = t2 - t1
+        const deltaPct = t1 > 0 ? ((delta / t1) * 100).toFixed(1) : '0.0'
+        const isDown = delta < 0
+        return (
+          <div className="fin-bridge">
+            <div className="fin-bridge__line" />
+            <article className="fin-bridge__card">
+              <span className="eyebrow">Variación interanual</span>
+              <div className="fin-bridge__stats">
+                <div className="fin-bridge__stat">
+                  <small>Total {label1}</small>
+                  <strong>{formatValue(t1, 'currency_clp_thousands')}</strong>
+                </div>
+                <div className={`fin-bridge__arrow ${isDown ? 'fin-bridge__arrow--down' : 'fin-bridge__arrow--up'}`}>
+                  <span>{isDown ? '▼' : '▲'}</span>
+                  <strong>{Math.abs(Number(deltaPct))}%</strong>
+                </div>
+                <div className="fin-bridge__stat">
+                  <small>Total {label2}</small>
+                  <strong>{formatValue(t2, 'currency_clp_thousands')}</strong>
+                </div>
+              </div>
+              <p className="fin-bridge__note">
+                {isDown
+                  ? `Reducción de ${formatValue(Math.abs(delta), 'currency_clp_thousands')} respecto al año anterior, reflejando menor ejecución en proyectos competitivos.`
+                  : `Incremento de ${formatValue(Math.abs(delta), 'currency_clp_thousands')} respecto al año anterior.`}
+              </p>
+            </article>
+            <div className="fin-bridge__line" />
+          </div>
+        )
+      })()}
+
       {/* ── Gráfico año 2 (solo en modo comparativo) ── */}
       {items2.length > 0 && (
         <article className="panel-card">
