@@ -294,8 +294,8 @@ code {
   align-self: start;
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  padding: 26px;
+  gap: 12px;
+  padding: 20px;
   border: 1px solid var(--glass-border);
   border-radius: var(--radius-2xl);
   background: rgba(248, 249, 255, 0.76);
@@ -318,31 +318,37 @@ code {
 }
 
 .brand-block h1 {
-  margin-top: 6px;
-  font-size: clamp(1.65rem, 3vw, 2.1rem);
-  line-height: 1.05;
-  letter-spacing: -0.03em;
+  margin-top: 4px;
+  font-size: clamp(1.15rem, 2vw, 1.45rem);
+  line-height: 1.1;
+  letter-spacing: -0.025em;
 }
 
-.brand-block p,
 .workspace-hero p,
 .detail-header p,
 .lead-card p,
 .panel-card p,
 .insight-card p,
-.mini-card p,
-.sidebar-note p {
+.mini-card p {
   margin: 0;
   font-size: 0.9rem;
   color: var(--ink-soft);
   line-height: 1.68;
 }
 
+.brand-block p,
+.sidebar-note p {
+  margin: 0;
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+  line-height: 1.6;
+}
+
 .sidebar-note,
 .sidebar-panel {
   display: grid;
-  gap: 12px;
-  padding: 18px;
+  gap: 9px;
+  padding: 12px 14px;
   border-radius: var(--radius-xl);
   border: 1px solid rgba(255, 255, 255, 0.5);
   background: rgba(255, 255, 255, 0.62);
@@ -358,39 +364,61 @@ code {
 }
 
 .year-switcher {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
-  gap: 10px;
+  display: flex;
+  background: rgba(194, 198, 210, 0.18);
+  border-radius: var(--radius-lg);
+  padding: 3px;
+  gap: 3px;
 }
 
 .year-pill {
-  display: grid;
-  gap: 4px;
-  padding: 14px 16px;
-  border-radius: var(--radius-lg);
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  background: rgba(239, 244, 255, 0.7);
-  color: var(--ink);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  padding: 8px 10px;
+  border-radius: calc(var(--radius-lg) - 2px);
+  border: none;
+  background: transparent;
+  color: var(--ink-soft);
   cursor: pointer;
-  text-align: left;
-  box-shadow: 0 2px 8px rgba(11, 28, 48, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.7);
-  transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+  text-align: center;
+  transition: background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
 }
 
-.year-pill:hover,
-.section-rail__item:hover {
-  transform: translateY(-1px);
+.year-pill:hover {
+  background: rgba(255, 255, 255, 0.75);
+  color: var(--ink);
 }
 
 .year-pill.is-active {
   background: linear-gradient(135deg, var(--primary), var(--primary-strong));
   color: #fff;
-  border-color: transparent;
-  box-shadow: 0 10px 28px rgba(0, 57, 107, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.18);
+  box-shadow: 0 4px 16px rgba(0, 57, 107, 0.2), inset 0 1px 0 rgba(255,255,255,0.18);
 }
 
 .year-pill__label {
-  opacity: 0.72;
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  opacity: 0.7;
+  line-height: 1;
+  margin-bottom: 2px;
+}
+
+.year-pill strong {
+  font-family: var(--display);
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.year-pill:hover,
+.section-rail__item:hover {
+  transform: translateY(-1px);
 }
 
 .ratio-grid {
@@ -400,12 +428,14 @@ code {
 }
 
 .sidebar-panel .ratio-grid {
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
 }
 .sidebar-panel .ratio-grid strong {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  font-size: 0.82rem;
 }
 
 .ratio-grid strong,
