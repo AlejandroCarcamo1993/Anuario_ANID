@@ -567,6 +567,14 @@ code {
   margin-top: 1px;
 }
 
+.panel-card .ratio-grid strong,
+.metric-card .ratio-grid strong {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--tertiary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 /* Corte date — use neutral dark instead of gradient (too long for gradient) */
 .sidebar-panel .ratio-grid > div:nth-child(3) strong {
   font-size: 0.72rem;
