@@ -51,20 +51,6 @@ export function DiversidadSection({ section, formatValue }) {
             La razón hombres/mujeres es {section.leadership.razonHM.toFixed(2)} y el liderazgo
             femenino mejora en equipos jóvenes ({formatValue(section.leadership.liderazgoJovenesPct, 'percentage')}).
           </p>
-          <div className="diversity-band">
-            <div className="diversity-band__item">
-              <small>Part. femenina</small>
-              <strong>{formatValue(section.kpis.find((k) => k.id === 'mujeresPct')?.value ?? 0, 'percentage')}</strong>
-            </div>
-            <div className="diversity-band__item">
-              <small>Liderazgo directivo</small>
-              <strong>{formatValue(section.leadership.directivoFemeninoPct, 'percentage')}</strong>
-            </div>
-            <div className="diversity-band__item">
-              <small>Investigadoras jóvenes</small>
-              <strong>{formatValue(section.leadership.liderazgoJovenesPct, 'percentage')}</strong>
-            </div>
-          </div>
         </article>
 
         <article className="panel-card diversity-sidecard">

@@ -4,10 +4,8 @@ import { C, tip, xAxis, yAxis } from '../lib/chartConfig'
 const YOUNG_RANGES = new Set(['20-24', '25-29', '30-34'])
 
 export function CapitalHumanoSection({ section, formatValue }) {
-  const total  = section.kpis.find((k) => k.id === 'total')?.value  ?? 0
-  const men    = section.kpis.find((k) => k.id === 'hombres')?.value ?? 0
-  const women  = section.kpis.find((k) => k.id === 'mujeres')?.value ?? 0
-  const pct35  = section.kpis.find((k) => k.id === 'tramo3554Pct')?.value ?? 0
+  const total = section.kpis.find((k) => k.id === 'total')?.value  ?? 0
+  const women = section.kpis.find((k) => k.id === 'mujeres')?.value ?? 0
 
   // Calcular participación femenina por grupo etario
   const youngRows = section.agePyramid.filter((r) => YOUNG_RANGES.has(r.ageRange))
@@ -74,20 +72,6 @@ export function CapitalHumanoSection({ section, formatValue }) {
           <span className="eyebrow">Composición del equipo</span>
           <h3>La masa crítica se concentra en edades de mayor productividad investigativa.</h3>
           <p>{section.insights?.[0]?.body}</p>
-          <div className="capital-band">
-            <div className="capital-band__item">
-              <small>Total</small><strong>{formatValue(total, 'integer')}</strong>
-            </div>
-            <div className="capital-band__item">
-              <small>Hombres</small><strong>{formatValue(men, 'integer')}</strong>
-            </div>
-            <div className="capital-band__item">
-              <small>Mujeres</small><strong>{formatValue(women, 'integer')}</strong>
-            </div>
-            <div className="capital-band__item">
-              <small>Tramo 35–54</small><strong>{formatValue(pct35, 'percentage')}</strong>
-            </div>
-          </div>
         </article>
 
         <article className="panel-card capital-sidecard">

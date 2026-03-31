@@ -128,14 +128,21 @@ export function PanoramaSection({ section, formatValue }) {
                     <small>Liderazgo femenino</small>
                     <strong>
                       {formatValue(
-                        section.leadershipGender.femalePct ?? section.leadershipGender.directivoFemeninoPct,
+                        section.leadershipGender.mujeresPct
+                          ?? section.leadershipGender.femalePct
+                          ?? section.leadershipGender.directivoFemeninoPct,
                         'percentage'
                       )}
                     </strong>
                   </div>
                   <div className="gender-strip__item">
                     <small>Razón H/M directivos</small>
-                    <strong>{section.leadershipGender.razonHM ?? '—'}</strong>
+                    <strong>
+                      {section.leadershipGender.razonHM
+                        ?? (section.leadershipGender.mujeres > 0
+                          ? (section.leadershipGender.hombres / section.leadershipGender.mujeres).toFixed(1)
+                          : '—')}
+                    </strong>
                   </div>
                 </div>
               )}
