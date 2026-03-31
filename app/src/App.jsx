@@ -105,11 +105,11 @@ export default function App() {
         </div>
 
         <div className="sidebar-note">
-          <span className="eyebrow">Acerca del anuario</span>
-          <p>
-            Datos actualizados al corte {currentData.footer.lastDataCut}.
-            Fuentes: bases de proyectos, investigadores y ejecución presupuestaria SCIA.
-          </p>
+          <span className="eyebrow">Corte de datos</span>
+          <div className="sidebar-note__date">
+            <span className="sidebar-note__chip">{currentData.footer.lastDataCut}</span>
+          </div>
+          <p>Bases de proyectos, investigadores y ejecución presupuestaria SCIA.</p>
         </div>
 
         <SectionRail
