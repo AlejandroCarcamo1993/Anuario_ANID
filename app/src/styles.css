@@ -3006,8 +3006,9 @@ code {
 }
 
 .panorama-donut-card {
-  display: grid;
-  align-content: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   gap: 8px;
 }
 
