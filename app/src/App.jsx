@@ -118,13 +118,16 @@ export default function App() {
           onSelect={setActiveSection}
         />
 
-        <div className="sidebar-panel sidebar-panel--muted">
+        <div className="sidebar-panel sidebar-panel--sources">
           <span className="eyebrow">Fuentes maestras</span>
-          <div className="source-cloud">
+          <ul className="source-list">
             {currentData.footer.sources.map((item) => (
-              <span key={item} className="source-pill">{item}</span>
+              <li key={item} className="source-list__item">
+                <span className="source-list__dot" />
+                <span>{item}</span>
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
       </aside>
 
