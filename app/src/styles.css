@@ -1000,7 +1000,18 @@ code {
 }
 
 .panel-card {
+  position: relative;
   transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.panel-card::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--primary) 0%, var(--tertiary) 60%, transparent 100%);
+  opacity: 0.3;
+  pointer-events: none;
 }
 
 .panel-card:hover {
