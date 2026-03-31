@@ -27,6 +27,7 @@ export function PostulacionSection({ section, formatValue }) {
   }
 
   const barOptions = {
+    indexAxis: 'y',
     responsive: true,
     maintainAspectRatio: false,
     plugins: {
@@ -34,13 +35,17 @@ export function PostulacionSection({ section, formatValue }) {
       tooltip: {
         ...tip,
         callbacks: {
-          label: (ctx) => ` ${ctx.dataset.label}: ${ctx.raw.toLocaleString('es-CL')}`,
+          label: (ctx) => {
+            const total = ctx.dataIndex === 0 ? totalPost : (adjudicaciones.hombres + adjudicaciones.mujeres)
+            const pct = total > 0 ? ((ctx.raw / total) * 100).toFixed(1) : '0.0'
+            return ` ${ctx.dataset.label}: ${ctx.raw.toLocaleString('es-CL')} (${pct}%)`
+          },
         },
       },
     },
     scales: {
-      x: xAxis(),
-      y: yAxis({ ticks: { callback: (v) => v.toLocaleString('es-CL') } }),
+      x: xAxis({ ticks: { callback: (v) => v.toLocaleString('es-CL') } }),
+      y: yAxis(),
     },
   }
 
@@ -69,7 +74,7 @@ export function PostulacionSection({ section, formatValue }) {
 
         <article className="panel-card">
           <span className="eyebrow">Postulaciones y adjudicaciones por género</span>
-          <div className="chart-wrap chart-wrap--bar">
+          <div className="chart-wrap chart-wrap--hbar">
             <Bar data={barData} options={barOptions} aria-label="Gráfico de barras: postulaciones y adjudicaciones por género" role="img" />
           </div>
         </article>
