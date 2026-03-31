@@ -148,31 +148,32 @@ export function ProductividadSection({ section, formatValue }) {
         </article>
       </div>
 
-      {/* Tesis por instrumento */}
-      <article className="panel-card">
-        <span className="eyebrow">Formación de capital humano — tesis por instrumento</span>
-        <div className="chart-wrap chart-wrap--hbar-lg">
-          <Bar data={tesisData} options={tesisOpts} aria-label="Gráfico de barras horizontal: tesis por instrumento" role="img" />
-        </div>
-        <div className="ratio-grid" style={{ marginTop: '0.75rem' }}>
-          {section.tesis.kpis.map((k) => (
-            <div key={k.id}><small>{k.label}</small><strong>{formatValue(k.value, k.format)}</strong></div>
-          ))}
-        </div>
-      </article>
+      {/* Tesis + Congresos — grid 2 columnas */}
+      <div className="prod-charts-grid">
+        <article className="panel-card">
+          <span className="eyebrow">Formación — tesis por instrumento</span>
+          <div className="chart-wrap chart-wrap--hbar">
+            <Bar data={tesisData} options={tesisOpts} aria-label="Gráfico de barras horizontal: tesis por instrumento" role="img" />
+          </div>
+          <div className="ratio-grid" style={{ marginTop: '0.75rem' }}>
+            {section.tesis.kpis.map((k) => (
+              <div key={k.id}><small>{k.label}</small><strong>{formatValue(k.value, k.format)}</strong></div>
+            ))}
+          </div>
+        </article>
 
-      {/* Congresos por instrumento */}
-      <article className="panel-card">
-        <span className="eyebrow">Presentaciones a congresos — nacional vs internacional</span>
-        <div className="chart-wrap chart-wrap--hbar-lg">
-          <Bar data={congData} options={congOpts} aria-label="Gráfico de barras horizontal: presentaciones a congresos nacional vs internacional" role="img" />
-        </div>
-        <div className="ratio-grid" style={{ marginTop: '0.75rem' }}>
-          {section.congresos.kpis.slice(0, 3).map((k) => (
-            <div key={k.id}><small>{k.label}</small><strong>{formatValue(k.value, k.format)}</strong></div>
-          ))}
-        </div>
-      </article>
+        <article className="panel-card">
+          <span className="eyebrow">Congresos — nacional vs internacional</span>
+          <div className="chart-wrap chart-wrap--hbar">
+            <Bar data={congData} options={congOpts} aria-label="Gráfico de barras horizontal: presentaciones a congresos nacional vs internacional" role="img" />
+          </div>
+          <div className="ratio-grid" style={{ marginTop: '0.75rem' }}>
+            {section.congresos.kpis.slice(0, 3).map((k) => (
+              <div key={k.id}><small>{k.label}</small><strong>{formatValue(k.value, k.format)}</strong></div>
+            ))}
+          </div>
+        </article>
+      </div>
 
       {/* Patentes */}
       <article className="panel-card">

@@ -1620,6 +1620,12 @@ code {
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 
+.prod-charts-grid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .prod-quality-card,
 .post-balance-card,
 .capital-sidecard,
@@ -2987,6 +2993,7 @@ code {
   .panorama-grid,
   .post-grid,
   .prod-top-grid,
+  .prod-charts-grid,
   .capital-grid,
   .diversity-grid,
   .uve-hero-grid,
