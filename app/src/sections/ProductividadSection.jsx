@@ -92,20 +92,6 @@ export function ProductividadSection({ section, formatValue }) {
           <span className="eyebrow">Sistema de outputs</span>
           <h3>Publicaciones, formación y divulgación: el núcleo de tracción del Anuario.</h3>
           <p>{section.insights?.[0]?.body}</p>
-          <div className="prod-band">
-            <div className="prod-band__item">
-              <small>Inst. Milenio</small>
-              <strong>{formatValue(section.publicaciones.totalsByProgram[0].total, 'integer')}</strong>
-            </div>
-            <div className="prod-band__item">
-              <small>Total tesis</small>
-              <strong>{formatValue(section.tesis.kpis[0].value, 'integer')}</strong>
-            </div>
-            <div className="prod-band__item">
-              <small>Actividades div.</small>
-              <strong>{formatValue(section.divulgacion.kpis[0].value, 'integer')}</strong>
-            </div>
-          </div>
         </article>
 
         {mismatch && (

@@ -931,12 +931,25 @@ code {
 }
 
 .detail-header {
+  position: relative;
   display: flex;
   justify-content: space-between;
   gap: 24px;
   align-items: flex-start;
-  padding-bottom: 4px;
+  padding-bottom: 16px;
+  padding-left: 18px;
   border-bottom: 1px solid rgba(66, 71, 80, 0.07);
+}
+
+.detail-header::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 16px;
+  width: 3px;
+  border-radius: 2px;
+  background: linear-gradient(180deg, var(--primary) 0%, var(--tertiary) 100%);
 }
 
 .detail-header > div:first-child {
@@ -1040,7 +1053,10 @@ code {
   font-family: var(--display);
   font-weight: 800;
   letter-spacing: -0.02em;
-  color: var(--ink);
+  background: linear-gradient(135deg, var(--primary) 0%, var(--tertiary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   font-variant-numeric: tabular-nums;
   line-height: 1.1;
 }
