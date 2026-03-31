@@ -117,6 +117,28 @@
           "sharePct": 23.5
         }
       ],
+      "centrosByInstrument": [
+        { "instrument": "Institutos Milenio",     "count": 17 },
+        { "instrument": "Centros Basales",         "count": 17 },
+        { "instrument": "Centros Fondap",          "count": 12 },
+        { "instrument": "Ctros. Regionales",       "count": 10 },
+        { "instrument": "Ctros. Internacionales",  "count": 6  },
+        { "instrument": "Ctros. Tecnológicos",     "count": 5  },
+        { "instrument": "Ctros. de Servicios",     "count": 3  },
+        { "instrument": "Ctros. de Educación",     "count": 2  }
+      ],
+      "disciplineDistribution": [
+        { "discipline": "Ciencias Naturales",      "count": 33, "pct": 43.4 },
+        { "discipline": "Ingeniería y Tecnología", "count": 15, "pct": 19.7 },
+        { "discipline": "Ciencias Sociales",       "count": 11, "pct": 14.5 },
+        { "discipline": "Multidisciplinario",      "count": 10, "pct": 13.2 },
+        { "discipline": "Ciencias Agrícolas",      "count": 4,  "pct": 5.3  },
+        { "discipline": "Ciencias de la Salud",    "count": 3,  "pct": 3.9  }
+      ],
+      "leadershipGender": {
+        "mujeresPct": 34.9,
+        "razonHM": 1.87
+      },
       "insights": [
         {
           "title": "Lectura clave · Concentracion de cartera",
