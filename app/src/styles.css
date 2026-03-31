@@ -883,10 +883,11 @@ code {
   gap: 0;
   overflow: hidden;
   border-radius: var(--radius-lg);
-  border: 1px solid rgba(194, 198, 210, 0.4);
-  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(194, 198, 210, 0.35);
+  background: linear-gradient(90deg, rgba(255,255,255,0.82), rgba(229,238,255,0.6));
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 1px 8px rgba(11,28,48,0.04), inset 0 1px 0 rgba(255,255,255,0.8);
 }
 
 .workspace-meta__item {
@@ -911,7 +912,7 @@ code {
 .workspace-meta__item strong {
   font-size: 0.8rem;
   font-weight: 600;
-  color: var(--ink);
+  color: var(--primary);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
