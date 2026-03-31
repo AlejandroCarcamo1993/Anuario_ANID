@@ -1496,7 +1496,16 @@ code {
 .budget-row,
 .demographic-row,
 .list-row--boxed {
-  background: rgba(255, 255, 255, 0.82);
+  background: linear-gradient(135deg, rgba(255,255,255,0.92), rgba(229,238,255,0.6));
+  border-left: 3px solid transparent;
+  border-image: linear-gradient(180deg, var(--primary), var(--tertiary)) 1;
+  box-shadow: 0 1px 6px rgba(11,28,48,0.04);
+  transition: background 0.15s ease, box-shadow 0.15s ease;
+}
+
+.list-row--boxed:hover {
+  background: linear-gradient(135deg, rgba(255,255,255,0.98), rgba(229,238,255,0.8));
+  box-shadow: 0 3px 12px rgba(11,28,48,0.08);
 }
 
 .portfolio-card {
@@ -1650,6 +1659,11 @@ code {
 .territory-map-card,
 .post-quality-card {
   align-content: start;
+}
+
+.fin-sidecard {
+  background: linear-gradient(145deg, rgba(255,255,255,0.88), rgba(229,238,255,0.55));
+  border-top: 3px solid var(--primary);
 }
 
 /* ── Capital Humano: sidecard de género ── */
