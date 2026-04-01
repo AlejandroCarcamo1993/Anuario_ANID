@@ -1514,11 +1514,13 @@ code {
 .highlight-card,
 .territory-row,
 .budget-row,
-.demographic-row,
+.demographic-row {
+  background: rgba(255, 255, 255, 0.82);
+}
+
 .list-row--boxed {
   background: linear-gradient(135deg, rgba(255,255,255,0.92), rgba(229,238,255,0.6));
-  border-left: 3px solid transparent;
-  border-image: linear-gradient(180deg, var(--primary), var(--tertiary)) 1;
+  border-left: 3px solid var(--primary);
   box-shadow: 0 1px 6px rgba(11,28,48,0.04);
   transition: background 0.15s ease, box-shadow 0.15s ease;
 }
