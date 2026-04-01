@@ -1180,8 +1180,7 @@ code {
 
 .insight-card {
   background: linear-gradient(150deg, rgba(255, 255, 255, 0.95) 0%, rgba(239, 244, 255, 0.86) 100%);
-  border: 1px solid rgba(255, 255, 255, 0.6);
-  border-left: 4px solid var(--primary);
+  border: 1px solid rgba(194, 198, 210, 0.35);
   box-shadow: var(--shadow-card);
 }
 
@@ -1520,7 +1519,7 @@ code {
 
 .list-row--boxed {
   background: linear-gradient(135deg, rgba(255,255,255,0.92), rgba(229,238,255,0.6));
-  border-left: 3px solid var(--primary);
+  border: 1px solid rgba(194, 198, 210, 0.3);
   box-shadow: 0 1px 6px rgba(11,28,48,0.04);
   transition: background 0.15s ease, box-shadow 0.15s ease;
 }
