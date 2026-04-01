@@ -162,20 +162,30 @@ export function ProductividadSection({ section, formatValue }) {
       </div>
 
       {/* Patentes */}
-      <article className="panel-card">
-        <span className="eyebrow">Propiedad intelectual</span>
-        <div className="list-grid">
-          {[...section.patentes.totalsByInstrument]
-            .sort((a, b) => sumPatents(b) - sumPatents(a))
-            .map((item) => (
-              <div key={item.instrument} className="list-row list-row--boxed">
-                <div>
+      <article className="panel-card prod-pi-card">
+        <div className="prod-pi-header">
+          <span className="eyebrow">Propiedad intelectual</span>
+          <span className="prod-pi-header__sub">Patentes · Derechos de autor · Marcas</span>
+        </div>
+        <div className="pi-list">
+          {(() => {
+            const sorted = [...section.patentes.totalsByInstrument].sort((a, b) => sumPatents(b) - sumPatents(a))
+            const max = sumPatents(sorted[0]) || 1
+            return sorted.map((item, i) => (
+              <div
+                key={item.instrument}
+                className="pi-row"
+                style={{ '--pi-bar': `${(sumPatents(item) / max) * 100}%` }}
+              >
+                <span className="pi-row__rank">{i + 1}</span>
+                <div className="pi-row__copy">
                   <strong>{item.instrument}</strong>
-                  <small>{item.patentes} pat · {item.derechoAutor} D.Autor</small>
+                  <small>{item.patentes} PAT · {item.derechoAutor} D.AUTOR</small>
                 </div>
-                <span className="pill-accent">{formatValue(sumPatents(item), 'integer')}</span>
+                <span className="pi-row__badge">{formatValue(sumPatents(item), 'integer')}</span>
               </div>
-            ))}
+            ))
+          })()}
         </div>
       </article>
     </div>
