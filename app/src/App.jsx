@@ -18,6 +18,12 @@ export default function App() {
   const [activeYear, setActiveYear] = useState(availableYears.at(-1) ?? 2024)
   const currentData = useMemo(() => getYearData(activeYear), [activeYear])
   const [activeSection, setActiveSection] = useState(currentData?.sectionOrder?.[0] ?? '')
+  const [sidebarOpen, setSidebarOpen] = useState(false)
+
+  function handleSectionSelect(key) {
+    setActiveSection(key)
+    setSidebarOpen(false)
+  }
 
   useEffect(() => {
     if (!currentData) return
@@ -73,10 +79,28 @@ export default function App() {
         <div className="app-topbar__meta">
           <span className="app-topbar__chip">Corte {currentData.footer.lastDataCut}</span>
           <span className="app-topbar__chip app-topbar__chip--accent">{activeYear}</span>
+          <button
+            className="topbar-menu-btn"
+            onClick={() => setSidebarOpen((o) => !o)}
+            aria-label={sidebarOpen ? 'Cerrar menú' : 'Abrir menú de navegación'}
+            aria-expanded={sidebarOpen}
+          >
+            <span className="material-symbols-outlined">
+              {sidebarOpen ? 'close' : 'menu'}
+            </span>
+          </button>
         </div>
       </header>
 
-      <aside className="sidebar">
+      {sidebarOpen && (
+        <div
+          className="sidebar-backdrop"
+          onClick={() => setSidebarOpen(false)}
+          aria-hidden="true"
+        />
+      )}
+
+      <aside className={`sidebar${sidebarOpen ? ' sidebar--open' : ''}`}>
         <div className="brand-block">
           <span className="brand-block__eyebrow">Archivo Institucional</span>
           <h1>Anuario Institucional SCIA</h1>
@@ -115,7 +139,7 @@ export default function App() {
         <SectionRail
           sections={sectionList}
           activeSection={activeSection}
-          onSelect={setActiveSection}
+          onSelect={handleSectionSelect}
         />
 
         <div className="sidebar-panel sidebar-panel--sources">

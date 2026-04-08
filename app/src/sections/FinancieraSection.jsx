@@ -1,8 +1,8 @@
 import { Bar } from 'react-chartjs-2'
-import { C, tip, xAxis, yAxis } from '../lib/chartConfig'
+import { C, tip, leg, xAxis, yAxis } from '../lib/chartConfig'
 
-const CENTRO_COLOR   = C.night
-const PROYECTO_COLOR = C.teal
+const CENTRO_COLOR   = '#344F9F'   // azul institucional, legible
+const PROYECTO_COLOR = '#00869a'   // teal luminoso, contrasta con azul
 
 function makeBarData(items) {
   return {

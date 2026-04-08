@@ -130,26 +130,28 @@ export function VinculacionSection({ section, formatValue }) {
         </div>
       </article>
 
-      <article className="panel-card highlight-wall">
-        <span className="eyebrow">Hallazgos científicos destacados</span>
-        <div className="mini-grid">
-          {section.scientificHighlights.items.map((item) => (
-            <article key={item.title} className="highlight-card">
-              <div className="highlight-card__top">
-                <small>{item.date}</small>
-                <span className="pill-accent">{item.programs}</span>
-              </div>
-              <strong>{item.title}</strong>
-              <p>{item.summary}</p>
-              <div className="source-cloud">
-                {item.tags.map((tag) => (
-                  <span key={tag} className="source-pill">{tag}</span>
-                ))}
-              </div>
-            </article>
-          ))}
-        </div>
-      </article>
+      {section.scientificHighlights.items.length > 0 && (
+        <article className="panel-card highlight-wall">
+          <span className="eyebrow">Hallazgos científicos destacados</span>
+          <div className="mini-grid">
+            {section.scientificHighlights.items.map((item) => (
+              <article key={item.title} className="highlight-card">
+                <div className="highlight-card__top">
+                  <small>{item.date}</small>
+                  <span className="pill-accent">{item.programs}</span>
+                </div>
+                <strong>{item.title}</strong>
+                <p>{item.summary}</p>
+                <div className="source-cloud">
+                  {item.tags.map((tag) => (
+                    <span key={tag} className="source-pill">{tag}</span>
+                  ))}
+                </div>
+              </article>
+            ))}
+          </div>
+        </article>
+      )}
     </div>
   )
 }

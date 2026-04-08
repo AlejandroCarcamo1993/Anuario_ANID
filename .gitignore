@@ -9,6 +9,11 @@ dist/
 .trae/
 .windsurf/
 .playwright-mcp/
+.awesome-design-md/
+
+# Snapshots / notas de sesión (referencia local)
+reportes/snap*.md
+reportes/snap_*.yml
 
 # OS
 .DS_Store

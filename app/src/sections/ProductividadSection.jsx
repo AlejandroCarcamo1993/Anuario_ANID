@@ -121,8 +121,9 @@ export function ProductividadSection({ section, formatValue }) {
           </article>
         ))}
 
-        <article className="panel-card">
+        <article className="panel-card pub-restantes-card">
           <span className="eyebrow">Publicaciones restantes</span>
+          <p className="pub-restantes-card__note">Sin desglose Q1 disponible</p>
           <div className="list-grid">
             {section.publicaciones.totalsByProgram.filter((p) => !p.q1).map((p) => (
               <div key={p.program} className="list-row list-row--boxed">
@@ -131,6 +132,17 @@ export function ProductividadSection({ section, formatValue }) {
               </div>
             ))}
           </div>
+          {(() => {
+            const total = section.publicaciones.totalsByProgram
+              .filter((p) => !p.q1)
+              .reduce((acc, p) => acc + p.total, 0)
+            return (
+              <div className="pub-restantes-card__total">
+                <small>Total</small>
+                <strong>{formatValue(total, 'integer')}</strong>
+              </div>
+            )
+          })()}
         </article>
       </div>
 

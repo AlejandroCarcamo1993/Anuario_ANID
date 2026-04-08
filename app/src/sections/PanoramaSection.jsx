@@ -2,7 +2,7 @@ import { Doughnut } from 'react-chartjs-2'
 import { C, tip, leg } from '../lib/chartConfig'
 
 const COLORS = [C.teal, C.copper, C.rose, '#4a5cc7']
-const INST_COLORS = ['#344F9F', '#293055', '#00566c', '#E75D50', '#4a5cc7', '#00869a', '#b36200', '#7c3aed']
+const INST_COLORS = ['#344F9F', '#0e7c7b', '#00566c', '#7b5ea7', '#4a5cc7', '#00869a', '#b36200', '#7c3aed']
 
 export function PanoramaSection({ section, formatValue }) {
   const topThreeShare = section.instrumentDistribution.slice(0, 3)
